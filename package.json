@@ -1,0 +1,24 @@
+{
+  "name": "41416-mishka",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект «Мишка» от HTML Academy",
+  "author": "Сергей Боднарюк",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:htmlacademy-adaptive/41416-mishka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htmlacademy-adaptive/41416-mishka/issues"
+  },
+  "homepage": "https://github.com/htmlacademy-adaptive/41416-mishka",
+  "devDependencies": {
+    "editorconfig-tools": "0.1.1"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *"
+  },
+  "engines": {
+    "node": "5.11"
+  }
+}

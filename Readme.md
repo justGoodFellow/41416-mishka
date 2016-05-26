@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Сергей Боднарюк](https://up.htmlacademy.ru/adaptive/7/user/41416).
-* Наставник: [Eugene Alanev](https://htmlacademy.ru/profile/id218109).
+* Наставник: [Eugene Alanev](https://up.htmlacademy.ru/adaptive/7/user/218109).
 
 ---
 

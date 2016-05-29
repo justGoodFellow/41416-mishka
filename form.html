@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Mishka</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__logo">
+        <a href="index.html"><img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka"></a>
+      </div>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item"><a>Вязание на заказ</a></li>
+            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
+          </ul>
+        </div>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      </nav>
+    </header>
+    <section class="order-form">
+      <h2 class="order-form__title">Вязание на заказ</h2>
+      <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form action="#" method="post">
+        <div class="order-form__selection">
+          <p class="order-form__selection-title">Тип</p>
+          <label><input type="radio">Аксессуар для интерьера</label><br>
+          <label><input type="radio">Детская игрушка</label>
+        </div>
+        <div class="order-form__selection">
+          <p class="order-form__selection-title">Цвет</p><br>
+          <label><input type="checkbox">Белый</label><br>
+          <label><input type="checkbox">Серый</label><br>
+          <label><input type="checkbox">&#171;Тиффани&#187;</label><br>
+          <label><input type="checkbox">Черный</label><br>
+          <label><input type="checkbox">Розовый</label><br>
+          <label><input type="checkbox">Оранжевый</label>
+        </div>
+        <div class="order-form__selection">
+          <p class="order-form__selection-title">ФИО</p>
+          <label for="surname">Фамилия:</label><br>
+          <input id="surname" type="text" placeholder="Укажите фамилию"><br>
+          <label for="name">Имя:</label><br>
+          <input id="name" type="text" placeholder="Введите ваше имя"><br>
+          <label for="patronymic">Отчество:</label><br>
+          <input id="patronymic" type="text"  placeholder="Отчество, если желаете">
+        </div>
+        <div class="order-form__selection">
+          <p class="order-form__selection-title">Тел</p>
+          <input type="text" placeholder="+7 xxx xx xx">
+        </div>
+        <div class="order-form__selection">
+          <p class="order-form__selection-title">e-mail</p>
+          <input type="text" placeholder="Ваш e-mail">
+        </div>
+        <div class="order-form__selection">
+          <p class="order-form__selection-title">Доп</p>
+          <textarea cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </div>
+        <button type="submit">Отправить заказ</button>
+      </form>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__social">
+        <ul class="social-links">
+          <li><a class="social-link social-link--in" href="#">Мы в Инстаграме</a></li>
+          <li><a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a></li>
+          <li><a class="social-link social-link--tw" href="#">Мы в Твиттере</a></li>
+        </ul>
+      </div>
+      <p class="page-footer__copyright">
+        Разработано <a class="page-footer__coperight-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </p>
+    </footer>
+  </body>
+</html>

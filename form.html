@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mishka</title>
   </head>
   <body>
@@ -11,14 +12,14 @@
       </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a>Вязание на заказ</a></li>
-            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
+          <div class="main-nav__menu">
+            <a class="main-nav__item" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__item">Вязание на заказ</a>
+            <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
+            <a class="main-nav__item main-nav__item--basket" href="#">Корзина: пока пуста</a>
+          </div>
         </div>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__toggle"></div>
       </nav>
     </header>
     <section class="order-form">
@@ -27,11 +28,11 @@
       <form action="#" method="post">
         <div class="order-form__selection">
           <p class="order-form__selection-title">Тип</p>
-          <label><input type="radio">Аксессуар для интерьера</label><br>
-          <label><input type="radio">Детская игрушка</label>
+          <label><input type="radio" name="kind">Аксессуар для интерьера</label><br>
+          <label><input type="radio" name="kind">Детская игрушка</label>
         </div>
         <div class="order-form__selection">
-          <p class="order-form__selection-title">Цвет</p><br>
+          <p class="order-form__selection-title">Цвет</p>
           <label><input type="checkbox">Белый</label><br>
           <label><input type="checkbox">Серый</label><br>
           <label><input type="checkbox">&#171;Тиффани&#187;</label><br>
@@ -42,19 +43,19 @@
         <div class="order-form__selection">
           <p class="order-form__selection-title">ФИО</p>
           <label for="surname">Фамилия:</label><br>
-          <input id="surname" type="text" placeholder="Укажите фамилию"><br>
+          <input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"><br>
           <label for="name">Имя:</label><br>
-          <input id="name" type="text" placeholder="Введите ваше имя"><br>
+          <input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"><br>
           <label for="patronymic">Отчество:</label><br>
-          <input id="patronymic" type="text"  placeholder="Отчество, если желаете">
+          <input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете">
         </div>
         <div class="order-form__selection">
           <p class="order-form__selection-title">Тел</p>
-          <input type="text" placeholder="+7 xxx xx xx">
+          <input class="selection-field selection-field--phone" type="number" placeholder="+7 xxx xx xx">
         </div>
         <div class="order-form__selection">
           <p class="order-form__selection-title">e-mail</p>
-          <input type="text" placeholder="Ваш e-mail">
+          <input class="selection-field selection-field--mail" type="email" placeholder="Ваш e-mail">
         </div>
         <div class="order-form__selection">
           <p class="order-form__selection-title">Доп</p>
@@ -64,12 +65,12 @@
       </form>
     </section>
     <footer class="page-footer">
-      <div class="page-footer__social">
-        <ul class="social-links">
-          <li><a class="social-link social-link--in" href="#">Мы в Инстаграме</a></li>
-          <li><a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a></li>
-          <li><a class="social-link social-link--tw" href="#">Мы в Твиттере</a></li>
-        </ul>
+      <div class="page-footer__social-links">
+        <div class="social">
+          <a class="social__link social__link--in" href="#">Мы в Инстаграме</a>
+          <a class="social__link social__link--fb" href="#">Мы в Фейсбуке</a>
+          <a class="social__link social__link--tw" href="#">Мы в Твиттере</a>
+        </div>
       </div>
       <p class="page-footer__copyright">
         Разработано <a class="page-footer__coperight-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>

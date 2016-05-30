@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mishka</title>
   </head>
   <body>
@@ -11,14 +12,14 @@
       </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a>Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a href="#">Корзина: пока пуста</a></li>
-          </ul>
+          <div class="main-nav__menu">
+            <a class="main-nav__item">Каталог товаров</a>
+            <a class="main-nav__item" href="form.html">Вязание на заказ</a>
+            <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
+            <a class="main-nav__item main-nav__item--basket" href="#">Корзина: пока пуста</a>
+          </div>
         </div>
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__toggle"></div>
       </nav>
     </header>
     <section class="catalog">
@@ -29,7 +30,7 @@
           <figcaption class="catalog-item__name">Зайчик-попрыгайчик</figcaption>
         </figure>
         <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
-        <a class="catalog-item__buy-btn" href="#">1 200 руб.</a>
+        <button class="catalog-item__buy-btn" type="button" href="#">1 200 руб.</button>
       </div>
       <div class="catalog-item">
         <figure>
@@ -37,7 +38,7 @@
           <figcaption class="catalog-item__name">Корзинка для белья</figcaption>
         </figure>
         <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
-        <a class="catalog-item__buy-btn" href="#">690 руб.</a>
+        <button class="catalog-item__buy-btn" type="button" href="#">690 руб.</button>
       </div>
       <div class="catalog-item">
         <figure>
@@ -45,22 +46,22 @@
           <figcaption class="catalog-item__name">Большая корзинка для игрушек</figcaption>
         </figure>
         <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
-        <a class="catalog-item__buy-btn" href="#">1 500 руб.</a>
+        <button class="catalog-item__buy-btn" type="button" href="#">1 500 руб.</button>
       </div>
       <div class="video">
         <h3 class="video__title">Процесс производства</h3>
-        <iframe width="260" height="150"></iframe>
+        <img src="http://placehold.it/260x150" width="260" height="150">
         <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a href="form.html" class="video__order-btn btn">Сделать заказ</a>
       </div>
     </section>
     <footer class="page-footer">
-      <div class="page-footer__social">
-        <ul class="social-links">
-          <li><a class="social-link social-link--in" href="#">Мы в Инстаграме</a></li>
-          <li><a class="social-link social-link--fb" href="#">Мы в Фейсбуке</a></li>
-          <li><a class="social-link social-link--tw" href="#">Мы в Твиттере</a></li>
-        </ul>
+      <div class="page-footer__social-links">
+        <div class="social">
+          <a class="social__link social__link--in" href="#">Мы в Инстаграме</a>
+          <a class="social__link social__link--fb" href="#">Мы в Фейсбуке</a>
+          <a class="social__link social__link--tw" href="#">Мы в Твиттере</a>
+        </div>
       </div>
       <p class="page-footer__copyright">
         Разработано <a class="page-footer__coperight-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>

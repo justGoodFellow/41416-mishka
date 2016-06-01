@@ -1,0 +1,23 @@
+.reviews__wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}
+
+.reviews__title {
+  font-family: $font-secondary;
+}
+
+.reviews__comment {
+  margin: 0;
+}
+
+.reviews__comment p {
+  font-size: $font-size--small;
+  color: $gray;
+}
+
+.reviews button {
+  padding: 10px;
+  background: none;
+  border: 1px solid #ececec;
+}

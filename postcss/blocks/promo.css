@@ -1,0 +1,40 @@
+.promo {
+  min-height: 506px;
+  background: #fafafa url(../img/hero-mobile@1x.jpg) 50% 0 no-repeat;
+}
+
+.promo__wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}
+
+.promo__title {
+  margin: 0;
+  padding: 93px 0 124px 0;
+  font-family: $font-secondary;
+  line-height: 30px;
+  text-align: center;
+}
+
+.promo__inner--interior {
+  background-color: $color-main;
+}
+
+.promo__inner--toys {
+  background-color: #56c3b2;
+}
+
+.promo__catalog {
+  display: block;
+  padding: 31px 0;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Tahoma, Geneva, sans-serif;
+  color: #fff;
+  text-decoration: none;
+  background-color: $color-main;
+
+  &--toys {
+    background-color: #56c3b2;
+  }
+}

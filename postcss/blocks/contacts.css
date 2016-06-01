@@ -1,0 +1,12 @@
+.contacts__wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}
+.contacts__title {
+  font-family: $font-secondary;
+}
+
+.contacts dl {
+  font-size: $font-size--small;
+  color: $gray;
+}

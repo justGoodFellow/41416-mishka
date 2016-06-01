@@ -1,0 +1,15 @@
+@import "normalize.css";
+@import "variables.css";
+
+@import "global/layout.css";
+@import "global/fonts.css";
+
+@import "blocks/page-header.css";
+@import "blocks/main-nav.css";
+@import "blocks/promo.css";
+@import "blocks/featured-product.css";
+@import "blocks/about-us.css";
+@import "blocks/reviews.css";
+@import "blocks/contacts.css";
+@import "blocks/page-footer.css";
+@import "blocks/btn.css";

@@ -1,0 +1,15 @@
+.about-us {
+  font-family: $font-secondary;
+}
+.about-us__wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}
+
+.about-us__title {
+}
+
+.about-us__advantage {
+  height: 92px;
+  font-weight: bold;
+}

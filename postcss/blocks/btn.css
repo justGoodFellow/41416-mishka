@@ -1,0 +1,10 @@
+.btn {
+  display: block;
+  padding: 15px 0;
+  color: $gray;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid $gray;
+}

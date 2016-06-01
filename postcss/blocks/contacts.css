@@ -1,3 +1,7 @@
+.contacts {
+  padding: 20px 0;
+}
+
 .contacts__wrapper {
   width: $screen-mobile;
   margin: 0 auto;
@@ -9,4 +13,9 @@
 .contacts dl {
   font-size: $font-size--small;
   color: $gray;
+  line-height: 30px;
+}
+
+.contacts__map {
+  text-align: center;
 }

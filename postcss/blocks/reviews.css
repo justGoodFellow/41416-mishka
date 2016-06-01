@@ -1,3 +1,8 @@
+.reviews {
+  padding: 20px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
 .reviews__wrapper {
   width: $screen-mobile;
   margin: 0 auto;
@@ -14,10 +19,20 @@
 .reviews__comment p {
   font-size: $font-size--small;
   color: $gray;
+  line-height: 30px;
 }
 
 .reviews button {
-  padding: 10px;
+  margin: 15px 0;
+  width: 130px;
+  height: 50px;
   background: none;
   border: 1px solid #ececec;
+  text-indent: 110%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.reviews__prev {
+  float: left;
 }

@@ -4,3 +4,8 @@ body {
   margin: 0 auto;
   font-family: $font-main;
 }
+
+.wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}

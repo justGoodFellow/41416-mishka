@@ -1,7 +1,10 @@
 .page-footer {
   background-color: #f1f1f1;
+  text-align: center;
 }
-
+.page-footer a {
+  padding: 10px;
+}
 .page-footer__wrapper {
   width: $screen-mobile;
   margin: 0 auto;
@@ -13,8 +16,13 @@
 
 .page-footer__copyright {
   margin: 0;
-  padding: 15px 0;
   font-family: $font-secondary;
   font-size: 18px;
   font-weight: bold;
+  padding: 22px 0;
+}
+
+.page-footer__copyright-link img {
+  padding: 0;
+  vertical-align: middle;
 }

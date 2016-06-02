@@ -1,0 +1,28 @@
+.page-footer {
+  background-color: $color-gray--light;
+  text-align: center;
+}
+.page-footer a {
+  padding: 10px;
+}
+.page-footer__wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}
+
+.page-footer__social-links {
+  border-bottom: 1px solid $color-gray--dark;
+}
+
+.page-footer__copyright {
+  margin: 0;
+  font-family: $font-secondary;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 22px 0;
+}
+
+.page-footer__copyright-link img {
+  padding: 0;
+  vertical-align: middle;
+}

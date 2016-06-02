@@ -1,0 +1,31 @@
+.contacts {
+  padding: 20px 0;
+}
+
+.contacts__wrapper {
+  width: $screen-mobile;
+  margin: 0 auto;
+}
+.contacts__title {
+  font-family: $font-secondary;
+}
+
+.contacts dl {
+  font-size: $font-size--small;
+  color: $color-gray;
+  line-height: $line-height--big;
+}
+
+.contacts dt {
+  display: inline-block;
+  width: 70px;
+  vertical-align: top;
+}
+
+.contacts dd {
+  display: inline-block;
+  margin: 0;
+}
+.contacts__map {
+  text-align: center;
+}

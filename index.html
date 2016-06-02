@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mishka</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__logo">
-        <img src="http://placehold.it/86x35" width="86" height="35" alt="Mishka">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
       </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
@@ -23,51 +24,65 @@
       </nav>
     </header>
     <section class="promo">
-      <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
-      <a class="promo__catalog promo__catalog--interior" href="#">Предметы интерьера</a>
-      <a class="promo__catalog promo__catalog--toys" href="#">Детские игрушки</a>
+      <div class="promo__wrapper">
+        <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
+      </div>
+        <div class="promo__inner promo__inner--interior">
+          <div class="promo__wrapper">
+            <a class="promo__catalog promo__catalog--interior" href="#">Предметы интерьера</a>
+          </div>
+        </div>
+        <div class="promo__inner promo__inner--toys">
+          <div class="promo__wrapper">
+            <a class="promo__catalog promo__catalog--toys" href="#">Детские игрушки</a>
+          </div>
+        </div>
     </section>
     <section class="featured-product">
-      <h2 class="featured-product__title"><a href="#">Вязаные корзинки</a></h2>
-      <span class="featured-product__mark">Товар недели</span>
-      <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-      <dl class="featured-product__description">
-          <dt>Цвет:</dt>
-          <dd>&#171;Тиффани&#187;/серый</dd>
-          <dt>Диаметр:</dt>
-          <dd>25 см</dd>
-          <dt>Высота:</dt>
-          <dd>15 см</dd>
-      </dl>
-      <img src="http://placehold.it/260x315" width="260" height="315" alt="Вязаные корзинки">
-      <p class="featured-product__price">Цена: 990 руб.</p>
-      <a class="btn" href="#">Заказать</a>
+      <div class="featured-product__wrapper">
+        <h2 class="featured-product__title"><a href="#">Вязаные корзинки</a></h2>
+        <span class="featured-product__mark">Товар недели</span>
+        <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+        <dl class="featured-product__description">
+          <div class="featured-product__description-wrapper">
+            <dt>Цвет:</dt>
+            <dd>&#171;Тиффани&#187;/серый</dd>
+          </div>
+          <div class="featured-product__description-wrapper">
+            <dt>Диаметр:</dt>
+            <dd>25 см</dd>
+          </div>
+          <div class="featured-product__description-wrapper">
+            <dt>Высота:</dt>
+            <dd>15 см</dd>
+          </div>
+        </dl>
+        <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+        <p class="featured-product__price">Цена: 990 руб.</p>
+        <a class="btn" href="#">Заказать</a>
+      </div>
     </section>
     <section class="about-us">
-      <h2 class="about-us__title">Коротко о нас:</h2>
-      <div class="about-us__advantage">
-        <img src="http://placehold.it/32x37" width="32" height="37" alt="">
-        <p>Экологически чистые материалы</p>
-      </div>
-      <div class="about-us__advantage">
-        <img src="http://placehold.it/47x27" width="47" height="27" alt="">
-        <p>Скандинавский стиль по российской цене</p>
-      </div>
-      <div class="about-us__advantage">
-        <img src="http://placehold.it/34x27" width="34" height="27" alt="">
-        <p>Увеличивет лайки на фотографиях</p>
-      </div>
-      <div class="about-us__advantage">
-        <img src="http://placehold.it/26x31" width="35" height="34" alt="">
-        <p>Связано вручную с любовью и умелением</p>
-      </div>
-      <div class="about-us__advantage">
-        <img src="http://placehold.it/26x31" width="55" height="23" alt="">
-        <p>Поддержка отечественного производителя</p>
-      </div>
-      <div class="about-us__advantage">
-        <img src="http://placehold.it/26x31" width="33" height="32" alt="">
-        <p>Поставляется в подарочной упаковке</p>
+      <div class="about-us__wrapper">
+        <h2 class="about-us__title">Коротко о нас:</h2>
+        <div class="about-us__advantage">
+          <p>Экологически чистые материалы</p>
+        </div>
+        <div class="about-us__advantage">
+          <p>Скандинавский стиль по российской цене</p>
+        </div>
+        <div class="about-us__advantage">
+          <p>Увеличивет лайки на фотографиях</p>
+        </div>
+        <div class="about-us__advantage">
+          <p>Связано вручную с любовью и умелением</p>
+        </div>
+        <div class="about-us__advantage">
+          <p>Поддержка отечественного производителя</p>
+        </div>
+        <div class="about-us__advantage">
+          <p>Поставляется в подарочной упаковке</p>
+        </div>
       </div>
     </section>
     <section class="reviews">
@@ -82,38 +97,44 @@
             </cite>
           </blockquote>
         </div>
-        <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-        <button class="reviews__next" type="button">Следующий отзыв</button>
+        <button class="reviews__nav-btn reviews__nav-btn--prev" type="button">Предыдущий отзыв</button>
+        <button class="reviews__nav-btn reviews__nav-btn--next" type="button">Следующий отзыв</button>
         <a class="reviews__write btn" href="#">Написать</a>
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <dl>
-        <dt>e-mail:</dt> <dd><a href="mailto:#">info@mimimishkashop.ru</a></dd>
-        <dt>адрес:</dt>
-        <dd>
-          г. Санкт-Петербург,<br>
-          ул. Большая Конюшенная,<br> 
-          д. 19/8, офис 101
-        </dd>
-      </dl>
-      <div class="map">
-        <img src="http://placehold.it/320x457" width="320" height="457" alt="Карта">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Контакты</h2>
+        <dl>
+          <dt>e-mail:</dt> <dd><a href="mailto:#">info@mimimishkashop.ru</a></dd>
+          <dt>адрес:</dt>
+          <dd>
+            г. Санкт-Петербург,<br>
+            ул. Большая Конюшенная,<br>
+            д. 19/8, офис 101
+          </dd>
+        </dl>
       </div>
-      <a class="btn contacts__feedback" href="#">Напишите нам</a>
+      <div class="contacts__map">
+        <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
+      </div>
+      <div class="contacts__wrapper">
+        <a class="contacts__feedback btn " href="#">Напишите нам</a>
+      </div>
     </section>
     <footer class="page-footer">
-      <div class="page-footer__social-links">
-        <div class="social">
-          <a class="social__link social__link--in" href="#">Мы в Инстаграме</a>
-          <a class="social__link social__link--fb" href="#">Мы в Фейсбуке</a>
-          <a class="social__link social__link--tw" href="#">Мы в Твиттере</a>
+      <div class="page-footer__wrapper">
+        <div class="page-footer__social-links">
+          <div class="social">
+            <a class="social__link social__link--in" href="#"><img src="img/icon-insta.svg" width="22" height="21" alt="Мы в Инстаграме"></a>
+            <a class="social__link social__link--fb" href="#"><img src="img/icon-fb.svg" width="15" height="28" alt="Мы в Фейсбуке"></a>
+            <a class="social__link social__link--tw" href="#"><img src="img/icon-twitter.svg" width="23" height="20" alt="Мы в Твиттере"></a>
+          </div>
         </div>
+        <p class="page-footer__copyright">
+          Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="40" height="40" alt="HTML Academy"></a>
+        </p>
       </div>
-      <p class="page-footer__copyright">
-        Разработано <a class="page-footer__coperight-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </p>
     </footer>
   </body>
 </html>

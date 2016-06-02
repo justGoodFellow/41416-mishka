@@ -1,11 +1,16 @@
-$gray: #444444;
-$gray-light: #f1f1f1;
+$color-gray--light: #f1f1f1;
+$color-gray: #444444;
+$color-gray--dark: #e5e5e5;
 $color-main: #63d1bb;
+$color-main--dark: #56c3b2;
 
-$font-main: 'Open Sans', sans-serif;
+$font-main: 'Open Sans', Arial, sans-serif;
 $font-secondary: Verdana, Geneva, sans-serif;
 
 $font-size--big: 24px;
 $font-size--small: 14px;
+
+$line-height: 24px;
+$line-height--big: 30px;
 
 $screen-mobile: 260px;

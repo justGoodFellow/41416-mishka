@@ -12,10 +12,20 @@
 
 .contacts dl {
   font-size: $font-size--small;
-  color: $gray;
-  line-height: 30px;
+  color: $color-gray;
+  line-height: $line-height--big;
 }
 
+.contacts dt {
+  display: inline-block;
+  width: 70px;
+  vertical-align: top;
+}
+
+.contacts dd {
+  display: inline-block;
+  margin: 0;
+}
 .contacts__map {
   text-align: center;
 }

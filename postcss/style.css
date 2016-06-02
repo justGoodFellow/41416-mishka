@@ -1,8 +1,8 @@
 @import "normalize.css";
 @import "variables.css";
 
-@import "global/layout.css";
 @import "global/fonts.css";
+@import "global/layout.css";
 
 @import "blocks/page-header.css";
 @import "blocks/logo.css";

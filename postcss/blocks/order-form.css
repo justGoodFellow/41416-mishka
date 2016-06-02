@@ -2,23 +2,71 @@
   padding-bottom: 65px;
 }
 
-.order-form__inner {
-  background-color: $gray-light;
+.order-form__description {
+  font-size: $font-size--small;
+  line-height: $line-height;
+  color: $color-gray;
 }
+
+.order-form__inner {
+  background-color: $color-gray--light;
+}
+
 .order-form__wrapper {
   width: $screen-mobile;
   margin: 0 auto;
 }
 
 .order-form__title {
-  padding: 76px 0;
+  padding: 75px 0;
   margin: 0;
   margin-bottom: 30px;
   text-align: center;
   font-family: $font-secondary;
 }
 
-button.btn {
+.order-form__selection {
+  margin: 30px 0;
+}
+
+.order-form__selection-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-main;
+}
+.order-form__selection-inner {
+  margin-top: 20px;
+}
+
+.order-form__selection label {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: $font-secondary;
+  font-weight: bold;
+}
+
+.selection-area {
+  margin-right: 20px;
+}
+
+.selection-field {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px 0;
+  border: none;
+  border-bottom: 2px solid #000;
+
+  &--fully {
+    box-sizing: border-box;
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px solid #000;
+  }
+}
+
+.order-form .btn {
   width: 100%;
   background-color: #fff;
 }

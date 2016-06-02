@@ -29,31 +29,37 @@
           <h2 class="order-form__title">Вязание на заказ</h2>
         </div>
       </div>
-      <div class="wrapper">
-        <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <div class="order-form__wrapper">
+        <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form action="#" method="post">
           <div class="order-form__selection">
             <p class="order-form__selection-title">Тип</p>
-            <label><input type="radio" name="kind">Аксессуар для интерьера</label><br>
-            <label><input type="radio" name="kind">Детская игрушка</label>
+            <div class="order-form__selection-inner">
+              <label><input class="selection-area" type="radio" name="kind">Аксессуар для интерьера</label><br>
+              <label><input class="selection-area" type="radio" name="kind">Детская игрушка</label>
+            </div>
           </div>
           <div class="order-form__selection">
             <p class="order-form__selection-title">Цвет</p>
-            <label><input type="checkbox">Белый</label><br>
-            <label><input type="checkbox">Серый</label><br>
-            <label><input type="checkbox">&#171;Тиффани&#187;</label><br>
-            <label><input type="checkbox">Черный</label><br>
-            <label><input type="checkbox">Розовый</label><br>
-            <label><input type="checkbox">Оранжевый</label>
+            <div class="order-form__selection-inner">
+              <label><input class="selection-area" type="checkbox">Белый</label><br>
+              <label><input class="selection-area" type="checkbox">Серый</label><br>
+              <label><input class="selection-area" type="checkbox">&#171;Тиффани&#187;</label><br>
+              <label><input class="selection-area" type="checkbox">Черный</label><br>
+              <label><input class="selection-area" type="checkbox">Розовый</label><br>
+              <label><input class="selection-area" type="checkbox">Оранжевый</label>
+            </div>
           </div>
           <div class="order-form__selection">
             <p class="order-form__selection-title">ФИО</p>
-            <label for="surname">Фамилия:</label><br>
-            <input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"><br>
-            <label for="name">Имя:</label><br>
-            <input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"><br>
-            <label for="patronymic">Отчество:</label><br>
-            <input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете">
+            <div class="order-form__selection-inner">
+              <label for="surname">Фамилия:</label><br>
+              <input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"><br>
+              <label for="name">Имя:</label><br>
+              <input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"><br>
+              <label for="patronymic">Отчество:</label><br>
+              <input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете">
+            </div>
           </div>
           <div class="order-form__selection">
             <p class="order-form__selection-title">Тел</p>
@@ -65,7 +71,7 @@
           </div>
           <div class="order-form__selection">
             <p class="order-form__selection-title">Доп</p>
-            <textarea cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="selection-field selection-field--fully" cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
           <button class="btn" type="submit">Отправить заказ</button>
         </form>

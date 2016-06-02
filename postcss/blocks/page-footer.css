@@ -1,5 +1,5 @@
 .page-footer {
-  background-color: #f1f1f1;
+  background-color: $color-gray--light;
   text-align: center;
 }
 .page-footer a {
@@ -11,7 +11,7 @@
 }
 
 .page-footer__social-links {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid $color-gray--dark;
 }
 
 .page-footer__copyright {

@@ -1,5 +1,5 @@
 .promo {
-  background: #fafafa url(../img/hero-mobile@1x.jpg) 50% 0 no-repeat;
+  background: $color-gray--light url(../img/hero-mobile@1x.jpg) 50% 0 no-repeat;
 }
 
 .promo__wrapper {
@@ -9,9 +9,9 @@
 
 .promo__title {
   margin: 0;
-  padding: 93px 0 124px 0;
+  padding: 90px 0 125px 0;
   font-family: $font-secondary;
-  line-height: 30px;
+  line-height: $line-height--big;
   text-align: center;
 }
 
@@ -20,20 +20,19 @@
 }
 
 .promo__inner--toys {
-  background-color: #56c3b2;
+  background-color: $color-main--dark;
 }
 
 .promo__catalog {
   display: block;
-  padding: 31px 0;
+  padding: 30px 0;
   font-size: 18px;
   font-weight: bold;
-  font-family: Tahoma, Geneva, sans-serif;
   color: #fff;
   text-decoration: none;
   background-color: $color-main;
 
   &--toys {
-    background-color: #56c3b2;
+    background-color: $color-main--dark;
   }
 }

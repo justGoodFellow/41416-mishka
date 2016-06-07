@@ -8,7 +8,8 @@
 }
 
 .about-us__wrapper {
-  width: $screen-mobile;
+  min-width: $screen-mobile;
+  max-width: $screen-mobile;
   margin: 0 auto;
 }
 
@@ -17,4 +18,36 @@
   margin-bottom: 30px;
   font-weight: bold;
   background: url(../img/icon-feature-1.svg) no-repeat;
+}
+
+@media (min-width: 768px) {
+  .about-us__wrapper {
+    max-width: $screen-tablet;
+  }
+  .about-us__list {
+    display: flex;
+  }
+  .about-us__inner {
+    width: 350px;
+  }
+  .about-us__title {
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+  .about-us__advantage {
+    min-height: 100px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .about-us__wrapper {
+    max-width: $screen-desktop;
+    padding-left: 175px;
+    box-sizing: border-box;
+  }
+  .about-us__title {
+    margin-bottom: 50px;
+    font-size: 50px;
+  }
 }

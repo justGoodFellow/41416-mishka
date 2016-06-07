@@ -8,9 +8,11 @@ $font-main: 'Open Sans', Arial, sans-serif;
 $font-secondary: Verdana, Geneva, sans-serif;
 
 $font-size--big: 24px;
-$font-size--small: 14px;
+$font-size--small: 14px;;
 
 $line-height: 24px;
 $line-height--big: 30px;
 
 $screen-mobile: 260px;
+$screen-tablet: 670px;
+$screen-desktop: 1050px;

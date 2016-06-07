@@ -6,7 +6,8 @@
   background-color: $color-gray--light;
 }
 .catalog__wrapper {
-  width: $screen-mobile;
+  min-width: $screen-mobile;
+  max-width: $screen-mobile;
   margin: 0 auto;
 }
 
@@ -24,11 +25,10 @@
 }
 
 .catalog-item__wrapper {
-  width: 204px;
-  margin: 0 auto;
+  padding: 0 30px;
 }
 
-.catalog-item img {
+.catalog-item__image img {
   width: 100%;
   padding: 0;
 }
@@ -39,12 +39,12 @@
   font-weight: bold;
 }
 
-.catalog-item__description {
+.catalog-item__specification {
   font-size: $font-size--small;
   color: $color-gray;
 }
 
-.catalog-item button {
+.catalog-item__buy-btn {
   display: block;
   width: 100%;
   padding: 30px 0;
@@ -57,22 +57,20 @@
 }
 
 .video {
-  padding: 15px 0;
   margin: 15px 0;
   border: 1px solid $color-gray--light;
 }
 
 .video__title {
-  margin: 0;
-  padding: 10px 0 25px 50px;
+  margin: 25px 0;
+  padding-left: 25px;
   font-size: 16px;
   font-family: $font-secondary;
   font-weight: bold;
 }
 
 .video__wrapper {
-  width: 204px;
-  margin: 0 auto;
+  padding: 0 35px;
 }
 
 .video img {
@@ -81,7 +79,73 @@
 }
 
 .video__description {
-  padding: 15px 0;
+  margin: 15px 0;
   font-size: $font-size--small;
   color: $color-gray;
+}
+
+@media (min-width: 768px) {
+  .catalog__wrapper {
+    max-width: $screen-tablet;
+  }
+  .catalog-item {
+    display: flex;
+    min-height: 334px;
+  }
+  .catalog-item__image {
+    width: 334px;
+    background: #444;
+    flex-shrink: 0;
+  }
+  .catalog-item__image img {
+    display: none;
+  }
+  .catalog-item__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .video__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  .video__title {
+    margin: 25px 0;
+  }
+  .video__img {
+    order: -1;
+    min-height: 455px;
+    background: #444;
+  }
+  .video__img img {
+    display: none;
+  }
+  .video__order-btn {
+    margin: 40px 0;
+  }
+}
+
+@media (min-width: 1150px) {
+  .catalog__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .catalog__wrapper {
+    max-width: $screen-desktop;
+  }
+  .catalog-item {
+    width: 316px;
+    flex-direction: column;
+  }
+  .catalog-item__image {
+    min-height: 462px;
+    width: auto;
+  }
+  .video__inner {
+    flex-direction: row;
+  }
+  .video__img {
+    width: 685px;
+    flex-shrink: 0;
+  }
 }

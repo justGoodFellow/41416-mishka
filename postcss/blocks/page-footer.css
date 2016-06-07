@@ -44,7 +44,7 @@
   .page-footer__wrapper {
     display: flex;
     max-width: $screen-tablet;
-    min-height: 143px;
+    height: 143px;
     align-items: center;
     justify-content: space-between;
   }

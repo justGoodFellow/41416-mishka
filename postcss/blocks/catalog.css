@@ -90,6 +90,7 @@
   }
   .catalog-item {
     display: flex;
+    height: 334px;
     min-height: 334px;
   }
   .catalog-item__image {
@@ -135,11 +136,15 @@
   }
   .catalog-item {
     width: 316px;
+    height: 658px;
     flex-direction: column;
   }
   .catalog-item__image {
     min-height: 462px;
     width: auto;
+  }
+  .catalog-item__wrapper {
+    height: 197px;
   }
   .video__inner {
     flex-direction: row;

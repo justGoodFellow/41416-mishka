@@ -8,14 +8,16 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a>
-      </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <div class="main-nav__menu">
             <a class="main-nav__item" href="catalog.html">Каталог товаров</a>
-            <a class="main-nav__item">Вязание на заказ</a>
+            <a class="main-nav__item" href="form.html">Вязание на заказ</a>
+            <div class="main-nav__item main-nav__item--logo">
+              <div class="main-nav__logo">
+                <a href="index.html"></a>
+              </div>
+            </div>
             <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
             <a class="main-nav__item main-nav__item--basket" href="#">Корзина: пока пуста</a>
           </div>
@@ -73,12 +75,16 @@
             <p class="order-form__selection-title">Доп</p>
             <textarea class="selection-field selection-field--fully" cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
-          <button class="btn" type="submit">Отправить заказ</button>
+          <button class="order-form__btn btn" type="submit">Отправить заказ</button>
+          <p class="order-form__notice">Все поля являются обязательными</p>
         </form>
       </div>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a href="index.html"><img src="img/logo-footer.svg" width="102" height="34" alt="Mishka"></a>
+        </div>
         <div class="page-footer__social-links">
           <div class="social">
             <a class="social__link social__link--in" href="#"><img src="img/icon-insta.svg" width="22" height="21" alt="Мы в Инстаграме"></a>

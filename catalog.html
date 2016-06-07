@@ -8,14 +8,16 @@
   </head>
   <body>
     <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a>
-      </div>
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <div class="main-nav__menu">
-            <a class="main-nav__item">Каталог товаров</a>
+            <a class="main-nav__item" href="catalog.html">Каталог товаров</a>
             <a class="main-nav__item" href="form.html">Вязание на заказ</a>
+            <div class="main-nav__item main-nav__item--logo">
+              <div class="main-nav__logo">
+                <a href="index.html"></a>
+              </div>
+            </div>
             <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
             <a class="main-nav__item main-nav__item--basket" href="#">Корзина: пока пуста</a>
           </div>
@@ -30,44 +32,65 @@
         </div>
       </div>
       <div class="catalog__wrapper">
-        <div class="catalog-item">
-            <img src="img\photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-          <div class="catalog-item__wrapper">
-            <h3 class="catalog-item__name">Зайчик-попрыгайчик</h3>
-            <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
-            <button class="catalog-item__buy-btn" type="button">1 200 руб.</button>
+        <div class="catalog__items">
+          <div class="catalog-item">
+            <div class="catalog-item__image">
+              <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+            </div>
+            <div class="catalog-item__wrapper">
+              <div class="catalog-item__description">
+                <h3 class="catalog-item__name">Зайчик-попрыгайчик</h3>
+                <p class="catalog-item__specification">Рост 30 см, вес 200 г</p>
+              </div>
+              <button class="catalog-item__buy-btn" type="button">1 200 руб.</button>
+            </div>
           </div>
-        </div>
-        <div class="catalog-item">
-            <img src="img\photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-          <div class="catalog-item__wrapper">
-            <h3 class="catalog-item__name">Корзинка для белья</h3>
-            <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
-            <button class="catalog-item__buy-btn" type="button">690 руб.</button>
+          <div class="catalog-item">
+            <div class="catalog-item__image">
+              <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+            </div>
+            <div class="catalog-item__wrapper">
+              <div class="catalog-item__description">
+                <h3 class="catalog-item__name">Корзинка для белья</h3>
+                <p class="catalog-item__specification">Диаметр 15 см, высота 10 см</p>
+              </div>
+              <button class="catalog-item__buy-btn" type="button">690 руб.</button>
+            </div>
           </div>
-        </div>
-        <div class="catalog-item">
-            <img src="img\photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
-          <div class="catalog-item__wrapper">
-            <h3 class="catalog-item__name">Большая корзинка для игрушек</h3>
-            <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
-            <button class="catalog-item__buy-btn" type="button">1 500 руб.</button>
+          <div class="catalog-item">
+            <div class="catalog-item__image">
+              <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+            </div>
+            <div class="catalog-item__wrapper">
+              <div class="catalog-item__description">
+                <h3 class="catalog-item__name">Большая корзинка для игрушек</h3>
+                <p class="catalog-item__specification">Диаметр 30 см, высота 30 см</p>
+              </div>
+              <button class="catalog-item__buy-btn" type="button">1 500 руб.</button>
+            </div>
           </div>
         </div>
         <div class="video">
-          <div class="video__wrapper">
-            <h3 class="video__title">Процесс производства</h3>
-          </div>
-          <img src="img\video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
-          <div class="video__wrapper">
-            <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a href="form.html" class="video__order-btn btn">Сделать заказ</a>
+          <div class="video__inner">
+            <div class="video__wrapper">
+              <h3 class="video__title">Процесс производства</h3>
+            </div>
+            <div class="video__img">
+              <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
+            </div>
+            <div class="video__wrapper">
+              <p class="video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a href="form.html" class="video__order-btn btn">Сделать заказ</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a href="index.html"><img src="img/logo-footer.svg" width="102" height="34" alt="Mishka"></a>
+        </div>
         <div class="page-footer__social-links">
           <div class="social">
             <a class="social__link social__link--in" href="#"><img src="img/icon-insta.svg" width="22" height="21" alt="Мы в Инстаграме"></a>

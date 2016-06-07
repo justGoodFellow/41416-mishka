@@ -4,6 +4,7 @@
 @import "global/fonts.css";
 @import "global/layout.css";
 
+@import "blocks/btn.css";
 @import "blocks/page-header.css";
 @import "blocks/logo.css";
 @import "blocks/main-nav.css";
@@ -14,6 +15,5 @@
 @import "blocks/contacts.css";
 @import "blocks/page-footer.css";
 @import "blocks/social.css";
-@import "blocks/btn.css";
 @import "blocks/order-form.css";
 @import "blocks/catalog.css";

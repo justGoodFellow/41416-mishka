@@ -8,7 +8,13 @@ $font-main: 'Open Sans', Arial, sans-serif;
 $font-secondary: Verdana, Geneva, sans-serif;
 
 $font-size--big: 24px;
-$font-size--small: 14px;;
+$font-size--small: 14px;
+
+$tablet-font-size--big: 40px;
+$tablet-font-size--small: 14px;
+
+$desktop-font-size--big: 50px;
+$desktop-font-size--small: 14px;
 
 $line-height: 24px;
 $line-height--big: 30px;

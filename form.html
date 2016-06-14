@@ -8,11 +8,11 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__menu">
-            <a class="main-nav__item" href="catalog.html">Каталог товаров</a>
-            <a class="main-nav__item" href="form.html">Вязание на заказ</a>
+            <a class="main-nav__item main-nav__item--catalog" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__item main-nav__item--order" href="form.html">Вязание на заказ</a>
             <div class="main-nav__item main-nav__item--logo">
               <div class="main-nav__logo">
                 <a href="index.html"></a>
@@ -20,6 +20,11 @@
             </div>
             <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
             <a class="main-nav__item main-nav__item--basket" href="#">Корзина: пока пуста</a>
+            <div class="main-nav__footer">
+              <a class="main-nav__item main-nav__item--new" href="#">Новые поступления</a>
+              <a class="main-nav__item main-nav__item--sale" href="#">Распродажа</a>
+              <p class="main-nav__shipping">Бесплатная доставка по России</p>
+            </div>
           </div>
         </div>
         <div class="main-nav__toggle"></div>
@@ -33,52 +38,65 @@
       </div>
       <div class="order-form__wrapper">
         <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+      </div>
         <form action="#" method="post">
           <div class="order-form__selection">
-            <p class="order-form__selection-title">Тип</p>
-            <div class="order-form__selection-inner">
-              <label><input class="selection-area" type="radio" name="kind">Аксессуар для интерьера</label><br>
-              <label><input class="selection-area" type="radio" name="kind">Детская игрушка</label>
+            <div class="order-form__wrapper">
+              <p class="order-form__selection-title">Тип</p>
+              <div class="order-form__selection-inner">
+                <label><input class="selection-area" type="radio" name="kind">Аксессуар для интерьера</label><br>
+                  <label><input class="selection-area" type="radio" name="kind">Детская игрушка</label>
+              </div>
             </div>
           </div>
           <div class="order-form__selection">
-            <p class="order-form__selection-title">Цвет</p>
-            <div class="order-form__selection-inner">
-              <label><input class="selection-area" type="checkbox">Белый</label><br>
-              <label><input class="selection-area" type="checkbox">Серый</label><br>
-              <label><input class="selection-area" type="checkbox">&#171;Тиффани&#187;</label><br>
-              <label><input class="selection-area" type="checkbox">Черный</label><br>
-              <label><input class="selection-area" type="checkbox">Розовый</label><br>
-              <label><input class="selection-area" type="checkbox">Оранжевый</label>
+            <div class="order-form__wrapper">
+              <p class="order-form__selection-title">Цвет</p>
+              <div class="order-form__selection-inner order-form__selection-inner--checkbox">
+                <label><input class="selection-area" type="checkbox">Белый</label><br>
+                <label><input class="selection-area" type="checkbox">Серый</label><br>
+                <label><input class="selection-area" type="checkbox">&#171;Тиффани&#187;</label><br>
+                <label><input class="selection-area" type="checkbox">Черный</label><br>
+                <label><input class="selection-area" type="checkbox">Розовый</label><br>
+                <label><input class="selection-area" type="checkbox">Оранжевый</label>
+              </div>
             </div>
           </div>
           <div class="order-form__selection">
-            <p class="order-form__selection-title">ФИО</p>
-            <div class="order-form__selection-inner">
-              <label for="surname">Фамилия:</label><br>
-              <input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"><br>
-              <label for="name">Имя:</label><br>
-              <input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"><br>
-              <label for="patronymic">Отчество:</label><br>
-              <input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете">
+            <div class="order-form__wrapper">
+              <p class="order-form__selection-title">ФИО</p>
+              <div class="order-form__selection-inner order-form__selection-inner--name">
+                <label>Фамилия:<input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"></label>
+                <label>Имя:<input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"></label>
+                <label>Отчество:<input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете"></label>
+              </div>
             </div>
           </div>
           <div class="order-form__selection">
-            <p class="order-form__selection-title">Тел</p>
-            <input class="selection-field selection-field--phone" type="number" placeholder="+7 xxx xx xx">
+            <div class="order-form__wrapper">
+              <p class="order-form__selection-title">Тел</p>
+              <input class="selection-field selection-field--phone" type="number" placeholder="+7 xxx xx xx">
+            </div>
           </div>
           <div class="order-form__selection">
-            <p class="order-form__selection-title">e-mail</p>
-            <input class="selection-field selection-field--mail" type="email" placeholder="Ваш e-mail">
+            <div class="order-form__wrapper">
+              <p class="order-form__selection-title">e-mail</p>
+              <input class="selection-field selection-field--mail" type="email" placeholder="Ваш e-mail">
+            </div>
           </div>
           <div class="order-form__selection">
-            <p class="order-form__selection-title">Доп</p>
-            <textarea class="selection-field selection-field--fully" cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="order-form__wrapper">
+              <p class="order-form__selection-title">Доп</p>
+              <textarea class="selection-field selection-field--fully" cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </div>
-          <button class="order-form__btn btn" type="submit">Отправить заказ</button>
-          <p class="order-form__notice">Все поля являются обязательными</p>
+          <div class="order-form__footer">
+            <div class="order-form__wrapper">
+              <button class="order-form__btn btn" type="submit">Отправить заказ</button>
+              <p class="order-form__notice">Все поля являются обязательными</p>
+            </div>
+          </div>
         </form>
-      </div>
     </section>
     <footer class="page-footer">
       <div class="page-footer__wrapper">

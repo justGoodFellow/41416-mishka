@@ -18,7 +18,10 @@
 
 .main-nav__item {
   display: block;
+  min-height: 80px;
+  box-sizing: border-box;
   padding: 30px 0;
+  font-size: 16px;
   font-family: $font-secondary;
   font-weight: bold;
   color: #000;
@@ -29,53 +32,183 @@
     order: -1;
     padding: 20px 0;
   }
+  &--search {
+    background: url(../img/icon-search.svg) 10% 50% no-repeat;
+  }
+  &--basket {
+    background: url(../img/icon-cart.svg) 30px 50% no-repeat;
+  }
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:focus {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
-@media (min-width: 1150px) {
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.main-nav--closed .main-nav__toggle {
+  background: url(../img/icon-menu-open.svg) 50% no-repeat;
+}
+
+.main-nav--opened .main-nav__toggle {
+  background: url(../img/icon-menu-close.svg) 50% no-repeat;
+}
+
+@media (--mobile-widths-only) {
   .main-nav {
-    border-bottom: 1px solid $color-gray--light;
+    position: relative;
+    width: 320px;
+    margin: 0 auto;
+  }
+  .main-nav--closed .main-nav__item {
+    display: none;
+
+    &--logo {
+      display: block;
+    }
+  }
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__item {
+    display: block;
+  }
+}
+
+.main-nav__footer {
+  display: none;
+}
+
+@media (--tablet-widths) {
+  .main-nav {
+    border-bottom: 1px solid #dfdfdf;
   }
   .main-nav__wrapper {
-    max-width: $screen-desktop;
-    margin: 0 auto;
+    @mixin container;
+    position: relative;
   }
   .main-nav__menu {
     flex-direction: row;
-  }
-  .main-nav__logo {
-    width: 149px;
-    height: 72px;
-    background: url(../img/logo-desktop.svg) no-repeat;
+    position: relative;
   }
   .main-nav__item {
-    padding: 30px 35px;
     border: none;
+    z-index: 1;
 
+    &--catalog,
+    &--order {
+      position: absolute;
+      top: 70px;
+      font-size: 14px;
+    }
+    &--catalog {
+      left: 0;
+    }
+    &--order {
+      left: 200px;
+    }
+    &--search {
+      width: 80px;
+      padding: 0;
+      text-indent: 500%;
+      white-space: nowrap;
+      overflow: hidden;
+      border-left: 1px solid $color-gray--light;
+      background-position: 50%;
+    }
+    &--basket {
+      padding-left: 80px;
+      border-left: 1px solid $color-gray--light;
+    }
+  }
+  .main-nav__item--logo {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-right: auto;
+  }
+  .main-nav__logo {
+    width: 113px;
+    height: 46px;
+    background: url(../img/logo-tablet.svg) no-repeat;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .main-nav__footer {
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    z-index: 1;
+    font-size: 14px;
+
+    .main-nav__item {
+      border: 0;
+      font-size: 14px;
+
+      &--new,
+      &--sale {
+        display: none;
+      }
+    }
+  }
+  .main-nav__shipping {
+    margin-left: auto;
+    color: $color-gray;
+    padding-top: 15px;
+  }
+}
+
+@media (--desktop-widths) {
+  .main-nav__item {
+    padding: 30px 35px;
+
+    &--catalog,
+    &--order {
+      position: static;
+      font-size: 16px;
+    }
     &--logo {
       order: 0;
       margin-right: 65px;
       padding: 5px 0;
       flex-grow: 1;
     }
-    &--search {
-      width: 80px;
-      padding: 0;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      background: url(../img/icon-search.svg) 50% no-repeat;
-      border-left: 1px solid $color-gray--light;
-    }
     &--basket {
       padding-left: 80px;
+      padding-right: 0;
     }
     &:first-child {
       padding-left: 0;
       border-right: 1px solid $color-gray--light;
     }
-    &:last-child {
-      padding-right: 0;
-      border-left: 1px solid $color-gray--light;
+  }
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+    background: url(../img/logo-desktop.svg) no-repeat;
+  }
+  .main-nav__footer {
+
+    .main-nav__item {
+
+      &--new,
+      &--sale {
+        display: block;
+        border: none;
+      }
     }
   }
 }

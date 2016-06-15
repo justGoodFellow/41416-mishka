@@ -1,0 +1,16 @@
+@custom-media --mobile-widths-only (max-width: 767px);
+@custom-media --tablet-widths (min-width: 768px);
+@custom-media --desktop-widths (min-width: 1150px);
+
+@define-mixin container {
+  width: $screen-mobile;
+  margin: 0 auto;
+
+  @media (--tablet-widths) {
+    width: $screen-tablet;
+  }
+
+  @media (--desktop-widths) {
+    width: $screen-desktop;
+  }
+}

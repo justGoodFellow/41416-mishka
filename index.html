@@ -8,18 +8,23 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__menu">
-            <a class="main-nav__item" href="catalog.html">Каталог товаров</a>
-            <a class="main-nav__item" href="form.html">Вязание на заказ</a>
+            <a class="main-nav__item main-nav__item--catalog" href="catalog.html">Каталог товаров</a>
+            <a class="main-nav__item main-nav__item--order" href="form.html">Вязание на заказ</a>
             <div class="main-nav__item main-nav__item--logo">
               <div class="main-nav__logo">
-                <a href=""></a>
+                <a></a>
               </div>
             </div>
             <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
             <a class="main-nav__item main-nav__item--basket" href="#">Корзина: пока пуста</a>
+            <div class="main-nav__footer">
+              <a class="main-nav__item main-nav__item--new" href="#">Новые поступления</a>
+              <a class="main-nav__item main-nav__item--sale" href="#">Распродажа</a>
+              <p class="main-nav__shipping">Бесплатная доставка по России</p>
+            </div>
           </div>
         </div>
         <div class="main-nav__toggle"></div>
@@ -31,13 +36,13 @@
       </div>
       <div class="promo__buttons">
         <div class="promo__inner promo__inner--interior">
-          <div class="promo__wrapper">
-            <a class="promo__catalog promo__catalog--interior" href="#">Предметы интерьера</a>
+          <div class="promo__button">
+            <a class="promo__catalog promo__catalog--interior" href="#">Предметы<br> интерьера</a>
           </div>
         </div>
         <div class="promo__inner promo__inner--toys">
-          <div class="promo__wrapper">
-            <a class="promo__catalog promo__catalog--toys" href="#">Детские игрушки</a>
+          <div class="promo__button">
+            <a class="promo__catalog promo__catalog--toys" href="#">Детские<br> игрушки</a>
           </div>
         </div>
       </div>
@@ -50,21 +55,21 @@
         </div>
         <div class="featured-product__content">
           <div class="featured-product__inner">
-            <p>Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-            <dl class="featured-product__description">
-              <div class="featured-product__description-wrapper">
+            <p class="featured-product__about">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <div class="featured-product__description">
+              <dl class="featured-product__description-wrapper">
                 <dt>Цвет:</dt>
                 <dd>&#171;Тиффани&#187;/серый</dd>
-              </div>
-              <div class="featured-product__description-wrapper">
+              </dl>
+              <dl class="featured-product__description-wrapper">
                 <dt>Диаметр:</dt>
                 <dd>25 см</dd>
-              </div>
-              <div class="featured-product__description-wrapper">
+              </dl>
+              <dl class="featured-product__description-wrapper">
                 <dt>Высота:</dt>
                 <dd>15 см</dd>
-              </div>
-            </dl>
+              </dl>
+            </div>
             <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
             <p class="featured-product__price">Цена: 990 руб.</p>
             <a class="btn" href="#">Заказать</a>
@@ -80,24 +85,24 @@
         <h2 class="about-us__title">Коротко о нас:</h2>
         <div class="about-us__list">
           <div class="about-us__inner">
-            <div class="about-us__advantage">
+            <div class="about-us__advantage about-us__advantage--flower">
               <p>Экологически чистые материалы</p>
             </div>
-            <div class="about-us__advantage">
+            <div class="about-us__advantage about-us__advantage--money">
               <p>Скандинавский стиль по российской цене</p>
             </div>
-            <div class="about-us__advantage">
+            <div class="about-us__advantage about-us__advantage--heart">
               <p>Увеличивет лайки на фотографиях</p>
             </div>
           </div>
           <div class="about-us__inner">
-            <div class="about-us__advantage">
+            <div class="about-us__advantage about-us__advantage--roll">
               <p>Связано вручную с любовью и умелением</p>
             </div>
-            <div class="about-us__advantage">
+            <div class="about-us__advantage about-us__advantage--rocket">
               <p>Поддержка отечественного производителя</p>
             </div>
-            <div class="about-us__advantage">
+            <div class="about-us__advantage about-us__advantage--gift">
               <p>Поставляется в подарочной упаковке</p>
             </div>
           </div>
@@ -126,19 +131,19 @@
     <section class="contacts">
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
-        <dl>
-          <div class="contacts__inner">
-            <dt>e-mail:</dt> <dd><a href="mailto:#">info@mimimishkashop.ru</a></dd>
-          </div>
-          <div class="contacts__inner">
+        <div class="contacts__inner">
+          <dl>
+            <dt>e-mail:</dt><dd><a href="mailto:#">info@mimimishkashop.ru</a></dd>
+          </dl>
+          <dl>
             <dt>адрес:</dt>
             <dd>
               г. Санкт-Петербург,<br>
               ул. Большая Конюшенная,<br>
               д. 19/8, офис 101
             </dd>
-          </div>
-        </dl>
+          </dl>
+        </div>
       </div>
       <div class="contacts__map">
 
@@ -164,5 +169,21 @@
         </p>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+  </script>
   </body>
 </html>

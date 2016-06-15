@@ -4,25 +4,44 @@
 }
 
 .about-us__title {
-  margin: 15px 0 30px 0;
+  margin-bottom: 30px;
+  font-size: $font-size--big;
 }
 
 .about-us__wrapper {
-  min-width: $screen-mobile;
-  max-width: $screen-mobile;
-  margin: 0 auto;
+  @mixin container;
 }
 
 .about-us__advantage {
   padding-top: 40px;
   margin-bottom: 30px;
+  font-size: 16px;
   font-weight: bold;
-  background: url(../img/icon-feature-1.svg) no-repeat;
+
+
+    &--flower {
+      background: url(../img/icon-feature-1.svg) no-repeat;
+    }
+    &--money {
+      background: url(../img/icon-feature-3.svg) no-repeat;
+    }
+    &--heart {
+      background: url(../img/icon-feature-5.svg) no-repeat;
+    }
+    &--roll {
+      background: url(../img/icon-feature-2.svg) no-repeat;
+    }
+    &--rocket {
+      background: url(../img/icon-feature-4.svg) no-repeat;
+    }
+    &--gift {
+      background: url(../img/icon-feature-6.svg) no-repeat;
+    }
 }
 
-@media (min-width: 768px) {
-  .about-us__wrapper {
-    max-width: $screen-tablet;
+@media (--tablet-widths) {
+  .about-us {
+    padding-top: 20px;
   }
   .about-us__list {
     display: flex;
@@ -32,22 +51,25 @@
   }
   .about-us__title {
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: $tablet-font-size--big;
   }
   .about-us__advantage {
     min-height: 100px;
     padding-right: 15px;
+    font-size: 20px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (--desktop-widths) {
+  .about-us {
+    padding-top: 30px;
+  }
   .about-us__wrapper {
-    max-width: $screen-desktop;
     padding-left: 175px;
     box-sizing: border-box;
   }
   .about-us__title {
     margin-bottom: 50px;
-    font-size: 50px;
+    font-size: $desktop-font-size--big;
   }
 }

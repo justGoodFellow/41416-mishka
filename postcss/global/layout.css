@@ -5,3 +5,9 @@ body {
   font-size: 16px;
   font-family: $font-main;
 }
+
+@media (--mobile-widths-only) {
+  body {
+    font-size: 14px;
+  }
+}

@@ -3,15 +3,14 @@
 }
 
 .promo__wrapper {
-  min-width: $screen-mobile;
-  max-width: $screen-mobile;
-  margin: 0 auto;
+  @mixin container;
 }
 
 .promo__title {
   margin: 0;
   padding: 90px 0 125px 0;
   font-family: $font-secondary;
+  font-size: $font-size--big;
   line-height: $line-height--big;
   text-align: center;
 }
@@ -19,7 +18,6 @@
 .promo__inner--interior {
   background-color: $color-main;
 }
-
 .promo__inner--toys {
   background-color: $color-main--dark;
 }
@@ -33,51 +31,79 @@
   text-decoration: none;
   background-color: $color-main;
 
+  &--interior {
+    background: $color-main url(../img/icon-interior.svg) 100% 50% no-repeat;
+  }
   &--toys {
-    background-color: $color-main--dark;
+    background: $color-main--dark url(../img/icon-toy.svg) 100% 50% no-repeat;
   }
 }
 
-@media (min-width: 768px) {
+@media (--mobile-widths-only) {
+  .promo__button {
+    width: 260px;
+    margin: 0 auto;
+  }
+}
+
+@media (--tablet-widths) {
   .promo {
+    position: relative;
+    padding-top: 60px;
     height: 745px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background: #f9f9f9 url(../img/hero-desktop@1x.jpg) 50% 0 no-repeat;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 11px;
+      background: url(../img/bg-wave.svg) 0 100% repeat-x;
+    }
   }
-  .promo__wrapper {
-    max-width: $screen-tablet;
+  .promo__title {
+    font-size: $tablet-font-size--big;
+    line-height: 50px;
   }
   .promo__buttons {
     display: flex;
-    align-items: flex-end;
-    max-width: $screen-tablet;
-    width: 100%;
+    @mixin container;
+    margin-top: auto;
+  }
+  .promo__inner--interior {
+    .promo__button {
+      background-color: $color-main;
+    }
+  }
+  .promo__inner--toys {
+    .promo__button {
+      background-color: $color-main--dark;
+    }
+  }
+  .promo__button {
+    padding-right: 35px;
   }
   .promo__inner {
     background: none;
     flex-grow: 1;
   }
-  .promo__title {
-    font-size: 40px;
-    line-height: 50px;
-  }
   .promo__catalog {
     padding-left: 35px;
+    font-size: 20px;
   }
 }
 
-@media (min-width: 1150px) {
-  .promo__wrapper {
-    max-width: $screen-desktop;
-  }
+@media (--desktop-widths) {
   .promo__title {
     width: 700px;
     margin: 0 auto;
-  }
-  .promo__buttons {
-    max-width: $screen-desktop;
+    font-size: $desktop-font-size--big;
   }
 }

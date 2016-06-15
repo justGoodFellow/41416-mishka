@@ -3,16 +3,16 @@
 }
 
 .contacts__wrapper {
-  min-width: $screen-mobile;
-  max-width: $screen-mobile;
-  margin: 0 auto;
+  @mixin container;
 }
+
 .contacts__title {
   font-family: $font-secondary;
+  font-size: $font-size--big;
 }
 
 .contacts dl {
-  font-size: $font-size--small;
+  font-size: ;
   color: $color-gray;
   line-height: $line-height--big;
 }
@@ -32,19 +32,30 @@
   background: url(../img/map-mobile@1x.jpg) 50% no-repeat;
 }
 
-@media (min-width: 768px) {
+@media (--tablet-widths) {
+  .contacts {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
   .contacts__wrapper {
-    max-width: $screen-tablet;
     display: flex;
     flex-direction: column;
   }
-  .contacts dl {
-    display: flex;
+  .contacts__title {
+    margin: 0;
+    padding: 30px 0;
+    font-size: $tablet-font-size--big;
+    background: url(../img/icon-flag.svg) 100% 50% no-repeat;
   }
   .contacts__inner {
-    width: 335px;
+    display: flex;
+  }
+  .contacts dl {
+    display: flex;
+    width: 50%;
   }
   .contacts__map {
+    margin: 40px 0;
     background: url(../img/map@1x.jpg) 50% no-repeat;
   }
   .contacts__feedback-btn {
@@ -53,30 +64,46 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (--desktop-widths) {
   .contacts {
-    margin-top: 70px;
     position: relative;
     min-height: 457px;
+    width: 1050px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-bottom: 90px;
   }
   .contacts__wrapper {
+    width: auto;
     box-sizing: border-box;
-    max-width: $screen-desktop;
     padding-left: 175px;
   }
-  .contacts dl {
+  .contacts__title {
+    font-size: $desktop-font-size--big;
+    background: none;
+
+    &:before {
+      content: "";
+      width: 47px;
+      height: 81px;
+      position: absolute;
+      left: 60px;
+      background: url(../img/icon-flag.svg);
+    }
+  }
+  .contacts__inner {
     flex-direction: column;
   }
   .contacts__map {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -1;
     width: 525px;
     height: 457px;
   }
   .contacts__feedback-btn {
     width: 230px;
+    margin-top: 103px;
     align-self: flex-start;
   }
 }

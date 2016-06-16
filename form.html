@@ -15,7 +15,17 @@
             <a class="main-nav__item main-nav__item--order" href="form.html">Вязание на заказ</a>
             <div class="main-nav__item main-nav__item--logo">
               <div class="main-nav__logo">
-                <a href="index.html"></a>
+                <a href="index.html">
+                  <picture>
+                    <source
+                      media="(min-width: 1150px)"
+                      srcset="img/logo-desktop.svg">
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="img/logo-tablet.svg">
+                    <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+                  </picture>
+                </a>
               </div>
             </div>
             <a class="main-nav__item main-nav__item--search" href="#">Поиск по сайту</a>
@@ -75,7 +85,7 @@
           <div class="order-form__selection">
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">Тел</p>
-              <input class="selection-field selection-field--phone" type="number" placeholder="+7 xxx xx xx">
+              <input class="selection-field selection-field--phone" type="tel" placeholder="+7 xxx xx xx">
             </div>
           </div>
           <div class="order-form__selection">
@@ -111,7 +121,7 @@
           </div>
         </div>
         <p class="page-footer__copyright">
-          Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/htmlacademy.svg" width="40" height="40" alt="HTML Academy"></a>
+          Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="40" height="40" alt="HTML Academy"></a>
         </p>
       </div>
     </footer>

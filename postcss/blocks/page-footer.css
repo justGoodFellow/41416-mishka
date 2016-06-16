@@ -1,6 +1,6 @@
 .page-footer {
-  text-align: center;
   background-color: $color-gray--light;
+  text-align: center;
 }
 
 .page-footer a {
@@ -24,9 +24,9 @@
 .page-footer__copyright {
   margin: 0;
   padding: 22px 0;
-  font-family: $font-secondary;
-  font-size: 18px;
   font-weight: bold;
+  font-size: 18px;
+  font-family: $font-secondary;
 }
 
 .page-footer__copyright-link img {
@@ -37,14 +37,15 @@
 @media (--tablet-widths) {
   .page-footer__wrapper {
     display: flex;
-    height: 143px;
     align-items: center;
     justify-content: space-between;
+    height: 143px;
   }
   .page-footer__logo {
     display: block;
   }
   .page-footer__social-links {
+    flex-shrink: 0;
     border: none;
   }
   .page-footer__copyright {

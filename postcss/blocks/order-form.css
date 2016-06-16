@@ -11,14 +11,14 @@
 }
 
 .order-form__description {
-  line-height: $line-height;
   color: $color-gray;
+  line-height: $line-height;
 }
 
 .order-form__title {
-  padding: 75px 0;
   margin: 0;
   margin-bottom: 30px;
+  padding: 75px 0;
   text-align: center;
   font-size: $font-size--big;
   font-family: $font-secondary;
@@ -31,10 +31,10 @@
 .order-form__selection-title {
   margin-top: 0;
   margin-bottom: 5px;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: bold;
   color: $color-main;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 16px;
 }
 .order-form__selection-inner {
   margin-top: 20px;
@@ -42,9 +42,9 @@
 
 .order-form__selection label {
   margin-top: 10px;
+  font-weight: bold;
   font-size: 16px;
   font-family: $font-secondary;
-  font-weight: bold;
 }
 
 .selection-area {
@@ -52,16 +52,16 @@
 }
 
 .selection-field {
-  width: 100%;
   margin-bottom: 10px;
   padding: 15px 0;
+  width: 100%;
   border: none;
   border-bottom: 2px solid #000;
   background: none;
+  color: rgba(68, 68, 68, 0.3);
+  font-weight: normal;
   font-size: 16px;
   font-family: $font-secondary;
-  font-weight: normal;
-  color: rgba(68, 68, 68, 0.3);
 
   &--phone {
     background: url(../img/icon-phone.svg) 95% 50% no-repeat;
@@ -78,8 +78,8 @@
 }
 
 .order-form__btn {
-  width: 100%;
   display: inline-block;
+  width: 100%;
   background-color: #fff;
 }
 
@@ -91,8 +91,8 @@
 
 .order-form input,
 .order-form textarea {
-  color: $color-gray;
   box-shadow: none;
+  color: $color-gray;
 
   &:hover,
   &:focus {
@@ -107,15 +107,16 @@
   .order-form__selection-title {
     display: flex;
     align-items: center;
-  }
-  .order-form__selection-title:after {
-    display: block;
-    flex-grow: 1;
-    content: "";
-    height: 1px;
-    width: 200px;
-    margin-left: 20px;
-    background: $color-main;
+
+    &::after {
+      display: block;
+      flex-grow: 1;
+      margin-left: 20px;
+      width: 200px;
+      height: 1px;
+      background: $color-main;
+      content: "";
+    }
   }
 }
 
@@ -127,12 +128,14 @@
     align-items: baseline;
   }
   .order-form__inner {
-    background: $color-gray--light url(../img/bg-wave.svg) 0 100% repeat-x;
+    min-height: 240px;
+    background: $color-gray--light url(../img/bg-zigzag-fill.svg) 0 285% repeat-x;
+    background-size: 80% 80%;
   }
   .order-form__title {
+    margin-bottom: 80px;
     padding-top: 80px;
     padding-bottom: 90px;
-    margin-bottom: 80px;
     font-size: $tablet-font-size--big;
   }
   .order-form__selection .order-form__wrapper {
@@ -146,7 +149,6 @@
       background: #f1f1f1;
     }
     &:nth-child(3) {
-
       .order-form__selection-title {
         align-self: flex-start;
         padding-top: 25px;
@@ -164,8 +166,8 @@
     }
   }
   .order-form__selection-title {
-    width: 170px;
     flex-shrink: 0;
+    width: 170px;
   }
   .order-form__selection-inner {
     flex-grow: 1;
@@ -198,12 +200,12 @@
   }
   .order-form__footer .order-form__wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: baseline;
+    justify-content: space-between;
   }
   .order-form__btn {
-    width: 230px;
     margin: 0;
+    width: 230px;
   }
   .order-form__notice {
     display: block;
@@ -221,9 +223,9 @@
     text-align: center;
   }
   .order-form__selection-inner {
-    width: 870px;
-    box-sizing: border-box;
     flex-grow: 0;
+    box-sizing: border-box;
+    width: 870px;
 
     &--checkbox label {
         width: 200px;
@@ -234,8 +236,8 @@
     padding-right: 175px;
   }
   .order-form__footer .order-form__wrapper {
-    padding-left: 175px;
     box-sizing: border-box;
+    padding-left: 175px;
   }
   .order-form__notice {
     margin-right: 175px;

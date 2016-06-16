@@ -4,10 +4,16 @@
 }
 
 .main-nav__logo {
-  width: 86px;
-  height: 35px;
-  margin: 0 auto;
-  background: url(../img/logo-mobile.svg) no-repeat;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__logo img {
+  padding: 0;
 }
 
 .main-nav__logo a {
@@ -18,15 +24,15 @@
 
 .main-nav__item {
   display: block;
-  min-height: 80px;
   box-sizing: border-box;
   padding: 30px 0;
-  font-size: 16px;
-  font-family: $font-secondary;
-  font-weight: bold;
+  min-height: 80px;
+  border-bottom: 1px solid $color-gray--light;
   color: #000;
   text-decoration: none;
-  border-bottom: 1px solid $color-gray--light;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: $font-secondary;
 
   &--logo {
     order: -1;
@@ -66,8 +72,8 @@
 @media (--mobile-widths-only) {
   .main-nav {
     position: relative;
-    width: 320px;
     margin: 0 auto;
+    width: 320px;
   }
   .main-nav--closed .main-nav__item {
     display: none;
@@ -94,20 +100,22 @@
   }
   .main-nav__wrapper {
     @mixin container;
+
     position: relative;
   }
   .main-nav__menu {
-    flex-direction: row;
     position: relative;
+    flex-direction: row;
   }
   .main-nav__item {
-    border: none;
     z-index: 1;
+    border: none;
 
     &--catalog,
     &--order {
       position: absolute;
       top: 70px;
+      z-index: 2;
       font-size: 14px;
     }
     &--catalog {
@@ -117,13 +125,13 @@
       left: 200px;
     }
     &--search {
-      width: 80px;
-      padding: 0;
-      text-indent: 500%;
-      white-space: nowrap;
       overflow: hidden;
+      padding: 0;
+      width: 80px;
       border-left: 1px solid $color-gray--light;
       background-position: 50%;
+      text-indent: 500%;
+      white-space: nowrap;
     }
     &--basket {
       padding-left: 80px;
@@ -133,25 +141,24 @@
   .main-nav__item--logo {
     display: flex;
     align-items: center;
-    padding: 0;
     margin-right: auto;
+    padding: 0;
   }
-  .main-nav__logo {
+  .main-nav__logo img {
     width: 113px;
     height: 46px;
-    background: url(../img/logo-tablet.svg) no-repeat;
   }
   .main-nav__toggle {
     display: none;
   }
   .main-nav__footer {
     position: absolute;
-    left: 0;
     top: 70px;
-    width: 100%;
+    left: 0;
+    z-index: 1;
     display: flex;
     align-items: baseline;
-    z-index: 1;
+    width: 100%;
     font-size: 14px;
 
     .main-nav__item {
@@ -166,8 +173,8 @@
   }
   .main-nav__shipping {
     margin-left: auto;
-    color: $color-gray;
     padding-top: 15px;
+    color: $color-gray;
   }
 }
 
@@ -181,29 +188,26 @@
       font-size: 16px;
     }
     &--logo {
+      flex-grow: 1;
       order: 0;
       margin-right: 65px;
       padding: 5px 0;
-      flex-grow: 1;
     }
     &--basket {
-      padding-left: 80px;
       padding-right: 0;
+      padding-left: 80px;
     }
     &:first-child {
       padding-left: 0;
       border-right: 1px solid $color-gray--light;
     }
   }
-  .main-nav__logo {
+  .main-nav__logo img {
     width: 149px;
     height: 72px;
-    background: url(../img/logo-desktop.svg) no-repeat;
   }
   .main-nav__footer {
-
     .main-nav__item {
-
       &--new,
       &--sale {
         display: block;

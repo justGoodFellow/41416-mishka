@@ -1,6 +1,5 @@
 .reviews {
   padding: 20px 0;
-  border-bottom: 1px solid $color-gray--light;
 }
 
 .reviews__wrapper {
@@ -8,8 +7,8 @@
 }
 
 .reviews__title {
-  font-family: $font-secondary;
   font-size: $font-size--big;
+  font-family: $font-secondary;
 }
 
 .reviews__comment {
@@ -17,7 +16,6 @@
 }
 
 .reviews__comment p {
-  font-size: ;
   color: $color-gray;
   line-height: $line-height--big;
 }
@@ -31,8 +29,8 @@
 .reviews__author-name {
   display: inline-block;
   margin: 10px 0;
-  font-family: $font-secondary;
   font-weight: bold;
+  font-family: $font-secondary;
 }
 
 .reviews__author-address {
@@ -40,16 +38,25 @@
 }
 
 .reviews__nav-btn {
+  overflow: hidden;
   margin: 15px 0;
   width: 49.2%;
   height: 50px;
-  background: none;
   border: 1px solid $color-gray--light;
-  text-indent: 110%;
+  background: none;
+  text-indent: 200%;
   white-space: nowrap;
-  overflow: hidden;
   cursor: pointer;
 
+  &--prev,
+  &--next {
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.3;
+    }
+  }
   &--prev {
     background: url(../img/icon-left-arrow.svg) 50% no-repeat;
   }
@@ -61,7 +68,13 @@
 @media (--tablet-widths) {
   .reviews {
     padding-top: 40px;
+    margin-bottom: 40px;
     background: url(../img/review@1x.jpg) no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../img/review@2x.jpg);
+      background-size: 350px auto;
+    }
   }
   .reviews__wrapper {
     position: relative;
@@ -72,18 +85,18 @@
   }
   .reviews__buttons {
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 150px;
   }
   .reviews__nav-btn {
     width: 85px;
   }
   .reviews__write {
-    width: 170px;
     position: absolute;
     top: 0;
     right: 0;
     margin-top: 0;
+    width: 170px;
   }
   .reviews__nav-btn {
     border: none;
@@ -97,15 +110,23 @@
   }
   .reviews__wrapper {
     box-sizing: border-box;
-    padding-left: 175px;
     padding-top: 20px;
+    padding-left: 175px;
     background: url(../img/review@1x.jpg) no-repeat;
+
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url(../img/review@2x.jpg);
+      background-size: 350px auto;
+    }
   }
   .reviews__title {
     font-size: $desktop-font-size--big;
   }
   .reviews__comment p {
     width: 700px;
+  }
+  .reviews__buttons {
+    bottom: 70px;
   }
   .reviews__write {
     top: 15%;

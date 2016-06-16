@@ -1,5 +1,7 @@
 .contacts {
   padding: 20px 0;
+  background: url(../img/bg-zigzag-line.svg) 0 0 repeat-x;
+  background-size: 300px;
 }
 
 .contacts__wrapper {
@@ -7,13 +9,13 @@
 }
 
 .contacts__title {
-  font-family: $font-secondary;
   font-size: $font-size--big;
+  font-family: $font-secondary;
 }
 
 .contacts dl {
-  font-size: ;
   color: $color-gray;
+  font-size: ;
   line-height: $line-height--big;
 }
 
@@ -29,13 +31,17 @@
 }
 .contacts__map {
   min-height: 457px;
-  background: url(../img/map-mobile@1x.jpg) 50% no-repeat;
+  text-align: center;
+}
+.contacts__map img {
+  padding: 0;
 }
 
 @media (--tablet-widths) {
   .contacts {
     padding-top: 30px;
     padding-bottom: 40px;
+    background-size: 800px;
   }
   .contacts__wrapper {
     display: flex;
@@ -44,8 +50,8 @@
   .contacts__title {
     margin: 0;
     padding: 30px 0;
-    font-size: $tablet-font-size--big;
     background: url(../img/icon-flag.svg) 100% 50% no-repeat;
+    font-size: $tablet-font-size--big;
   }
   .contacts__inner {
     display: flex;
@@ -56,39 +62,39 @@
   }
   .contacts__map {
     margin: 40px 0;
-    background: url(../img/map@1x.jpg) 50% no-repeat;
   }
   .contacts__feedback-btn {
-    width: 230px;
     align-self: center;
+    width: 230px;
   }
 }
 
 @media (--desktop-widths) {
   .contacts {
     position: relative;
-    min-height: 457px;
-    width: 1050px;
-    margin: 0 auto;
-    margin-top: 70px;
+    padding-top: 70px;
     padding-bottom: 90px;
+    min-height: 457px;
+    background-size: 1200px;
   }
   .contacts__wrapper {
-    width: auto;
     box-sizing: border-box;
+    margin: 0 auto;
     padding-left: 175px;
+    width: 1050px;
   }
   .contacts__title {
-    font-size: $desktop-font-size--big;
+    position: relative;
     background: none;
+    font-size: $desktop-font-size--big;
 
-    &:before {
-      content: "";
+    &::before {
+      position: absolute;
+      left: -110px;
       width: 47px;
       height: 81px;
-      position: absolute;
-      left: 60px;
       background: url(../img/icon-flag.svg);
+      content: "";
     }
   }
   .contacts__inner {
@@ -98,12 +104,14 @@
     position: absolute;
     top: 0;
     right: 0;
+    margin-top: 60px;
+    margin-right: 50px;
     width: 525px;
     height: 457px;
   }
   .contacts__feedback-btn {
-    width: 230px;
-    margin-top: 103px;
     align-self: flex-start;
+    margin-top: 103px;
+    width: 230px;
   }
 }

@@ -73,11 +73,11 @@
 
   text-align: center;
 
-  background-color: #ece9e2;
-
   img {
     padding: 0;
   }
+
+  // background-color: #ece9e2
 }
 
 @media (--tablet-widths) {

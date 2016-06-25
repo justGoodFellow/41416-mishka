@@ -286,9 +286,10 @@
   .video {
     position: relative;
 
-    min-height: 456px;
+    min-height: 455px;
     margin: 30px 0;
     padding-left: 658px;
+    overflow: hidden;
   }
 
   .video__inner {
@@ -318,6 +319,7 @@
 
     width: 685px;
   }
+
   .video__order-btn {
     margin-top: 45px;
   }

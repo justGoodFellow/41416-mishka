@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mishka</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.min.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -53,9 +54,13 @@
           <div class="order-form__selection">
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">Тип</p>
-              <div class="order-form__selection-inner">
-                <label><input class="selection-area" type="radio" name="kind">Аксессуар для интерьера</label><br>
-                  <label><input class="selection-area" type="radio" name="kind">Детская игрушка</label>
+              <div class="order-form__selection-inner order-form__selection-inner--radio">
+                <div>
+                  <input class="selection-area" id="interior" type="radio" name="kind"><label for="interior">Аксессуар для интерьера</label><br>
+                </div>
+                <div>
+                  <input class="selection-area" id="toys" type="radio" name="kind"><label for="toys">Детская игрушка</label>
+                </div>
               </div>
             </div>
           </div>
@@ -63,12 +68,24 @@
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">Цвет</p>
               <div class="order-form__selection-inner order-form__selection-inner--checkbox">
-                <label><input class="selection-area" type="checkbox">Белый</label><br>
-                <label><input class="selection-area" type="checkbox">Серый</label><br>
-                <label><input class="selection-area" type="checkbox">&#171;Тиффани&#187;</label><br>
-                <label><input class="selection-area" type="checkbox">Черный</label><br>
-                <label><input class="selection-area" type="checkbox">Розовый</label><br>
-                <label><input class="selection-area" type="checkbox">Оранжевый</label>
+                <div>
+                  <input id="white" class="selection-area" type="checkbox"><label for="white">Белый</label><br>
+                </div>
+                <div>
+                  <input class="selection-area" id="gray" type="checkbox"><label for="gray">Серый</label><br>
+                </div>
+                <div>
+                  <input class="selection-area" id="tiffany" type="checkbox"><label for="tiffany">&#171;Тиффани&#187;</label><br>
+                </div>
+                <div>
+                  <input class="selection-area" id="black" type="checkbox"><label for="black">Черный</label><br>
+                </div>
+                <div>
+                  <input class="selection-area" id="pink" type="checkbox"><label for="pink">Розовый</label><br>
+                </div>
+                <div>
+                  <input class="selection-area" id="orange" type="checkbox"><label for="orange">Оранжевый</label>
+                </div>
               </div>
             </div>
           </div>
@@ -76,9 +93,9 @@
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">ФИО</p>
               <div class="order-form__selection-inner order-form__selection-inner--name">
-                <label>Фамилия:<input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"></label>
-                <label>Имя:<input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"></label>
-                <label>Отчество:<input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете"></label>
+                <label><span>Фамилия:</span><input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"></label>
+                <label><span>Имя:</span><input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"></label>
+                <label><span>Отчество:</span><input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете"></label>
               </div>
             </div>
           </div>
@@ -121,9 +138,16 @@
           </div>
         </div>
         <p class="page-footer__copyright">
-          Разработано <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="40" height="40" alt="HTML Academy"></a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+            Разработано
+            <svg id="logo-htmlacademy" xmlns="http://www.w3.org/2000/svg" width="26.943" height="34.09" viewBox="0 0 26.943 34.09">
+              <path d="M13.62.017L13.472 0 0 1.412v24.66l13.473 8.018 13.43-7.99.042-.025V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.548-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.013 1.414 5.904 3.513-.86.507-5.03-2.992-.013 1.415 3.827 2.275-.782.523-3.03-1.787-.015 1.413 1.853 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.017 1.045-7.942-4.728-.015 1.416 7.98 4.795.017 1.076-7.973-4.74-.014 1.415 8.02 4.822.047.025 8.143-4.872-.01-5.177 3.414-2.036v10.02L13.472 31.85 1.925 24.98v-9.853z"/>
+            </svg>
+          </a>
         </p>
       </div>
     </footer>
+    <script src="js/script.js">
+    </script>
   </body>
 </html>

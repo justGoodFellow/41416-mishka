@@ -1,3 +1,27 @@
-.social__link img {
-  padding: 25px 10px;
+.social__link {
+  padding: 10px;
+
+    img {
+     padding: 0 10px;
+     padding-top: 20px;
+     padding-bottom: 25px;
+
+     filter: brightness(0);
+
+     &:hover {
+       filter: brightness(1);
+     }
+
+     &:active {
+       opacity: 0.3;
+     }
+  }
+}
+
+@media (--tablet-widths) {
+  .social__link {
+    img {
+      padding: 0 8px;
+    }
+  }
 }

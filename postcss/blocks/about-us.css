@@ -1,10 +1,13 @@
 .about-us {
-  padding: 15px 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+
   font-family: $font-secondary;
 }
 
 .about-us__title {
   margin-bottom: 30px;
+
   font-size: $font-size--big;
 }
 
@@ -14,25 +17,31 @@
 
 .about-us__advantage {
   margin-bottom: 30px;
-  padding-top: 40px;
+  padding-top: 35px;
+
   font-weight: bold;
   font-size: 16px;
 
     &--flower {
       background: url(../img/icon-feature-1.svg) no-repeat;
     }
+
     &--money {
       background: url(../img/icon-feature-3.svg) no-repeat;
     }
+
     &--heart {
       background: url(../img/icon-feature-5.svg) no-repeat;
     }
+
     &--roll {
       background: url(../img/icon-feature-2.svg) no-repeat;
     }
+
     &--rocket {
       background: url(../img/icon-feature-4.svg) no-repeat;
     }
+
     &--gift {
       background: url(../img/icon-feature-6.svg) no-repeat;
     }
@@ -42,19 +51,25 @@
   .about-us {
     padding-top: 20px;
   }
+
   .about-us__list {
     display: flex;
   }
+
   .about-us__inner {
     width: 350px;
   }
+
   .about-us__title {
     margin-bottom: 50px;
+
     font-size: $tablet-font-size--big;
   }
+
   .about-us__advantage {
-    padding-right: 15px;
     min-height: 100px;
+    padding-right: 15px;
+
     font-size: 20px;
   }
 }
@@ -63,12 +78,15 @@
   .about-us {
     padding-top: 30px;
   }
+
   .about-us__wrapper {
     box-sizing: border-box;
     padding-left: 175px;
   }
+
   .about-us__title {
     margin-bottom: 50px;
+
     font-size: $desktop-font-size--big;
   }
 }

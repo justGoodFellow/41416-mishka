@@ -14,7 +14,6 @@ var svgmin = require("gulp-svgmin");
 var server = require("browser-sync");
 var run = require("run-sequence");
 var del = require("del");
-var filters = require("pleeease-filters");
 
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
@@ -30,8 +29,7 @@ gulp.task("style", function() {
       ]}),
       mqpacker({
         sort: true
-      }),
-      filters()
+      })
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())

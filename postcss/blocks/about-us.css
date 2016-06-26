@@ -49,8 +49,8 @@
 
 @media (--tablet-widths) {
   .about-us {
-    padding-top: 10px;
     margin-bottom: 15px;
+    padding-top: 10px;
   }
 
   .about-us__title {
@@ -90,8 +90,10 @@
 
   .about-us__title {
     margin: 40px 0;
+
     font-size: $desktop-font-size--big;
   }
+
   .about-us__list {
     margin-top: 50px;
   }

@@ -1,20 +1,19 @@
+
 .social__link {
   padding: 10px;
+  text-decoration: none;
 
-    img {
+    svg {
      padding: 0 10px;
      padding-top: 20px;
      padding-bottom: 25px;
-
-     filter: brightness(0);
-
      &:hover {
-       filter: brightness(1);
+       fill: $color-main;
      }
 
      &:active {
        opacity: 0.3;
-     }
+    }
   }
 }
 

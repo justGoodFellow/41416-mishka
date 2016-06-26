@@ -14,11 +14,9 @@
 
   text-align: left;
 
-  img {
-    filter: brightness(0);
-
+  svg {
     &:hover {
-      filter: brightness(1);
+      fill: $color-main;
     }
 
     &:active {

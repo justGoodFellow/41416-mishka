@@ -24,6 +24,7 @@
 .catalog-item {
   min-height: 375px;
   margin: 30px 0;
+  overflow: hidden;
 
   border: 1px solid $color-gray--light;
 }
@@ -119,9 +120,28 @@
 }
 
 .video__img {
+  position: relative;
+
+  display: block;
   min-height: 150px;
 
   background-color: $color-gray--light;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 101px;
+    height: 76px;
+    margin-top: -32px;
+    margin-left: -50px;
+
+    background-image: url(../img/icon-play.svg);
+    background-repeat: no-repeat;;
+  }
 }
 
 .video__img picture {

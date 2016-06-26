@@ -14,6 +14,7 @@ var svgmin = require("gulp-svgmin");
 var server = require("browser-sync");
 var run = require("run-sequence");
 var del = require("del");
+var filters = require("pleeease-filters");
 
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
@@ -29,7 +30,8 @@ gulp.task("style", function() {
       ]}),
       mqpacker({
         sort: true
-      })
+      }),
+      filters()
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
@@ -39,10 +41,11 @@ gulp.task("style", function() {
 });
 
 gulp.task("images", function() {
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
+  return gulp.src("build/img/**/*.{png,jpg,gif,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
 });

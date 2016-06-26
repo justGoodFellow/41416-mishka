@@ -1,5 +1,5 @@
 .order-form {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .order-form__inner {
@@ -34,6 +34,24 @@
 .order-form__selection {
   margin: 30px 0;
   margin-top: 25px;
+
+  &--name {
+    margin-bottom: 20px;
+  }
+
+  &--phone {
+    margin-top: 20px;
+
+    .order-form__selection-title {
+      margin-bottom: 5px;
+    }
+  }
+
+  &--mail {
+    .order-form__selection-title {
+      margin-bottom: 5px;
+    }
+  }
 }
 
 .order-form__selection-title {
@@ -195,6 +213,8 @@
   border-radius: 0;
 
   &--phone {
+    text-transform: uppercase;
+
     background-image: url(../img/icon-phone.svg);
   }
 
@@ -215,7 +235,8 @@
 
   &--fully {
     box-sizing: border-box;
-    margin-top: 25px;
+    min-height: 150px;
+    margin-top: 10px;
     padding: 15px;
 
     border: 2px solid #000000;
@@ -269,11 +290,15 @@
       background: $color-main;
     }
   }
+
+  .order-form__description br {
+    display: none;
+  }
 }
 
 @media (--tablet-widths) {
   .order-form {
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 
   .order-form__wrapper {
@@ -282,6 +307,7 @@
 
   .order-form__inner {
     min-height: 240px;
+    margin-bottom: 60px;
 
     background: $color-gray--light url(../img/bg-zigzag-fill.svg) 0 100% repeat-x;
     background-size: auto 24px;
@@ -289,7 +315,7 @@
 
   .order-form__title {
     margin-bottom: 80px;
-    padding-top: 80px;
+    padding-top: 95px;
     padding-bottom: 90px;
 
     font-size: $tablet-font-size--big;
@@ -299,33 +325,60 @@
     display: flex;
   }
 
+  .order-form__description {
+    line-height: $line-height--big;
+  }
+
   .order-form__selection {
     margin: 0;
     padding: 55px 0;
 
-    &:nth-child(even) {
+    &--type {
+      padding-top: 40px;
+      padding-bottom: 50px;
+
+      .order-form__selection-title {
+        align-self: flex-start;
+        padding-top: 15px;
+      }
+    }
+
+    &--color {
+      padding-bottom: 45px;
+
       background-color: $color-gray--light;
     }
 
-    &:nth-child(3) {
+    &--name {
+      padding-top: 35px;
+      padding-bottom: 60px;
+
       .order-form__selection-title {
         align-self: flex-start;
         padding-top: 25px;
       }
+
+      label {
+        margin-top: 10px;
+      }
     }
 
-    &:nth-child(4) {
-      padding-bottom: 20px;
+    &--phone {
+      padding-top: 50px;
+      padding-bottom: 10px;
+
+      background-color: $color-gray--light;
     }
 
-    &:nth-child(5) {
+    &--mail {
+      margin-bottom: 5px;
       padding-top: 0;
 
       background-color: $color-gray--light;
     }
 
-    &:nth-child(6) {
-      background: #ffffff;
+    &--area {
+      padding-bottom: 25px;
     }
   }
 
@@ -348,10 +401,11 @@
     &--checkbox {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
 
       label {
         box-sizing: border-box;
-        width: 250px;
+        width: 240px;
         padding-top: 15px;
       }
     }
@@ -416,8 +470,15 @@
     }
   }
 
-  .selection-field--fully {
-    margin-top: 0;
+  .selection-field {
+    &--phone,
+    &--mail {
+      background-position: 95% 50%;
+    }
+
+    &--fully {
+      margin-top: 0;
+    }
   }
 
   .order-form__footer .order-form__wrapper {
@@ -437,11 +498,19 @@
 }
 
 @media (--desktop-widths) {
+  .order-form {
+    padding-bottom: 45px;
+  }
+
   .order-form__inner {
     background-size: auto;
   }
 
   .order-form__title {
+    margin-bottom: 105px;
+    padding-top: 90px;
+    padding-bottom: 120px;
+
     font-size: $desktop-font-size--big;
   }
 
@@ -450,6 +519,8 @@
   }
 
   .order-form__selection-title {
+    width: 175px;
+
     text-align: center;
   }
 
@@ -459,7 +530,7 @@
     width: 870px;
 
     &--checkbox label {
-        width: 235px;
+        width: 180px;
     }
   }
 
@@ -471,6 +542,23 @@
   .order-form__footer .order-form__wrapper {
     box-sizing: border-box;
     padding-left: 175px;
+  }
+
+  .order-form__selection {
+    &--name {
+      padding-top: 40px;
+    }
+
+    &--area {
+      padding-bottom: 60px;
+    }
+  }
+
+  .selection-field {
+    &--phone,
+    &--mail {
+      background-position: 99.5% 50%;
+    }
   }
 
   .order-form__notice {

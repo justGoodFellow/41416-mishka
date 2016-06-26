@@ -49,34 +49,38 @@
 
 @media (--tablet-widths) {
   .about-us {
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .about-us__title {
+    font-size: $tablet-font-size--big;
   }
 
   .about-us__list {
     display: flex;
+    margin-top: 55px;
   }
 
   .about-us__inner {
     width: 350px;
   }
 
-  .about-us__title {
-    margin-bottom: 50px;
-
-    font-size: $tablet-font-size--big;
-  }
-
   .about-us__advantage {
-    min-height: 100px;
+    min-height: 90px;
     padding-right: 15px;
 
     font-size: 20px;
+
+    p {
+      margin: 15px 0;
+    }
   }
 }
 
 @media (--desktop-widths) {
   .about-us {
-    padding-top: 30px;
+    padding-top: 10px;
   }
 
   .about-us__wrapper {
@@ -85,8 +89,10 @@
   }
 
   .about-us__title {
-    margin-bottom: 50px;
-
+    margin: 40px 0;
     font-size: $desktop-font-size--big;
+  }
+  .about-us__list {
+    margin-top: 50px;
   }
 }

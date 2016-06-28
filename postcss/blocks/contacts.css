@@ -21,37 +21,11 @@
 
 .contacts {
   dl {
-    margin: 30px 0;
+    margin-top: 25px;
+    margin-bottom: 30px;
 
     line-height: $line-height--big;
     color: $color-gray;
-
-    a {
-      color: $color-gray;
-      text-decoration: none;
-
-      &::after {
-        content: "";
-
-        display: block;
-        width: 93%;
-        height: 1px;
-
-        background-color: $color-main;
-      }
-
-      &:hover {
-        color: $color-main;
-      }
-
-      &:active {
-        opacity: 0.3;
-
-        &::after {
-          opacity: 0.3;
-        }
-      }
-    }
   }
 
   dt {
@@ -64,6 +38,35 @@
   dd {
     display: inline-block;
     margin: 0;
+
+    vertical-align: top;
+  }
+}
+
+.contacts__mail-link {
+  color: $color-gray;
+  text-decoration: none;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 93%;
+    height: 1px;
+
+    background-color: $color-main;
+  }
+
+  &:hover {
+    color: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -71,7 +74,7 @@
   position: relative;
 
   min-height: 457px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 
   text-align: center;
 
@@ -126,6 +129,7 @@
   .contacts dl {
     display: flex;
     width: 50%;
+    margin: 30px 0;
   }
 
   .contacts__map {
@@ -199,9 +203,9 @@
 
   .contacts__feedback-btn {
     align-self: flex-start;
-    width: 225px;
+    min-width: 225px;
     margin-top: 70px;
     margin-bottom: 0;
-    padding: 10px 0;
+    padding: 10px 15px;
   }
 }

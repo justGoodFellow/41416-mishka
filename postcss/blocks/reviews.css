@@ -26,6 +26,7 @@
 .reviews__author {
   display: inline-block;
 
+  vertical-align: top;
   font-style: normal;
 }
 
@@ -35,6 +36,7 @@
 
   font-weight: bold;
   font-family: $font-secondary;
+  vertical-align: top;
 }
 
 .reviews__author-address {
@@ -99,6 +101,7 @@
   }
 
   .reviews__title {
+    max-width: 470px;
     margin-bottom: 50px;
 
     font-size: $tablet-font-size--big;
@@ -132,7 +135,7 @@
     top: 5px;
     right: 0;
 
-    width: 170px;
+    min-width: 175px;
     margin-top: 0;
   }
 }
@@ -159,6 +162,7 @@
   }
 
   .reviews__title {
+    min-width: 650px;
     margin-bottom: 45px;
 
     font-size: $desktop-font-size--big;

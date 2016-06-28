@@ -36,31 +36,31 @@
   font-weight: bold;
   font-size: 18px;
   font-family: $font-secondary;
+}
 
-  a {
+.page-footer__copyright-link {
+  color: #000000;
+  text-decoration: none;
+
+  &:active {
     color: #000000;
     text-decoration: none;
 
-    &:active {
-      color: #000000;
-      text-decoration: none;
-
-      opacity: 0.3;
-    }
-
-    &:hover svg {
-      fill: $color-main--dark;
-    }
+    opacity: 0.3;
   }
-}
 
-.page-footer__copyright-link svg {
-  margin-left: 15px;
-  padding: 0;
+  &:hover svg {
+    fill: $color-main--dark;
+  }
 
-  vertical-align: middle;
+  svg {
+    margin-left: 15px;
+    padding: 0;
 
-  fill: $color-main;
+    vertical-align: middle;
+
+    fill: $color-main;
+  }
 }
 
 @media (--tablet-widths) {

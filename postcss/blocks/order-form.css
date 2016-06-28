@@ -90,6 +90,8 @@
 .order-form__selection-inner--radio,
 .order-form__selection-inner--checkbox {
   label {
+    margin-bottom: 20px;
+
     &:hover::before {
       border-color: $color-main;
     }
@@ -150,6 +152,7 @@
 
   label {
     margin: 2px 0;
+    margin-bottom: 24px;
     padding: 10px 0;
     padding-left: 65px;
 
@@ -247,6 +250,8 @@
   display: inline-block;
   width: 100%;
 
+  vertical-align: top;
+
   background-color: #ffffff;
 }
 
@@ -335,7 +340,7 @@
 
     &--type {
       padding-top: 40px;
-      padding-bottom: 50px;
+      padding-bottom: 35px;
 
       .order-form__selection-title {
         align-self: flex-start;

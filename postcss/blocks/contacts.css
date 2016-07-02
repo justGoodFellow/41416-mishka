@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 20px;
+  padding-top: 25px;
   padding-bottom: 25px;
 
   background: url(../img/bg-zigzag-line.svg) 0 0 repeat-x;
@@ -87,8 +87,8 @@
     display: block;
     width: 65px;
     height: 100px;
-    margin-top: -50px;
-    margin-left: -32.5px;
+    margin-top: -65px;
+    margin-left: -35px;
 
     background: url(../img/icon-map-pin.svg) no-repeat;
   }

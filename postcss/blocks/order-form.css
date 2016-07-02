@@ -40,10 +40,10 @@
   }
 
   &--phone {
-    margin-top: 20px;
+    margin-top: 25px;
 
     .order-form__selection-title {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
 
@@ -148,11 +148,11 @@
 }
 
 .order-form__selection-inner--checkbox {
-  margin-top: 20px;
+  margin-top: 25px;
 
   label {
     margin: 2px 0;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     padding: 10px 0;
     padding-left: 65px;
 
@@ -193,7 +193,7 @@
 }
 
 .order-form__selection-inner--name {
-  margin-top: 30px;
+  margin-top: 39px;
 
   label {
     margin-top: 15px;
@@ -249,6 +249,7 @@
 .order-form__btn {
   display: inline-block;
   width: 100%;
+  margin-top: 10px;
 
   vertical-align: top;
 
@@ -319,7 +320,7 @@
   }
 
   .order-form__title {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     padding-top: 95px;
     padding-bottom: 90px;
 
@@ -369,7 +370,7 @@
     }
 
     &--phone {
-      padding-top: 50px;
+      padding-top: 55px;
       padding-bottom: 10px;
 
       background-color: $color-gray--light;

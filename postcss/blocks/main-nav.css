@@ -115,6 +115,10 @@
     }
   }
 
+  .main-nav__shipping {
+    display: none;
+  }
+
   .main-nav--closed .main-nav__item {
     display: none;
 
@@ -132,10 +136,6 @@
   }
 }
 
-.main-nav__footer {
-  display: none;
-}
-
 @media (--tablet-widths) {
   .main-nav {
     border-bottom: 1px solid #dfdfdf;
@@ -151,6 +151,8 @@
     position: relative;
 
     flex-direction: row;
+    flex-wrap: wrap;
+    height: 85px;
   }
 
   .main-nav__item {
@@ -176,23 +178,18 @@
 
     &--catalog,
     &--order {
-      position: absolute;
-      top: 85px;
-      z-index: 2;
+      padding: 25px 20px;
 
-      padding: 25px 0;
-
-      font-size: 14px;
+      font-size: $font-size--small;
     }
 
     &--catalog {
-      left: 0;
-
+      order: 1;
       padding-left: 0;
     }
 
     &--order {
-      left: 170px;
+      order: 2;
     }
 
     &--search {
@@ -212,6 +209,19 @@
 
       border-left: 1px solid #ececec;
     }
+
+    &--new,
+    &--sale {
+      display: none;
+    }
+  }
+
+  .main-nav__logo {
+    min-width: 300px;
+
+    a {
+      text-align: left;
+    }
   }
 
   .main-nav__toggle {
@@ -219,11 +229,6 @@
   }
 
   .main-nav__footer {
-    position: absolute;
-    top: 85px;
-    left: 0;
-    z-index: 1;
-
     display: flex;
     align-items: baseline;
     width: 100%;
@@ -243,9 +248,13 @@
   }
 
   .main-nav__shipping {
+    z-index: 1;
+
+    order: 3;
     margin-left: auto;
     padding-top: 10px;
 
+    font-size: $font-size--small;
     font-family: $font-secondary;
     color: $color-gray;
   }
@@ -257,7 +266,7 @@
 
     &--catalog,
     &--order {
-      position: static;
+      order: 0;
 
       font-size: 16px;
     }
@@ -275,6 +284,18 @@
       padding-left: 80px;
     }
 
+    &--new,
+    &--sale {
+      display: block;
+      padding: 25px 30px;
+
+      font-size: $font-size--small;
+    }
+
+    &--new {
+      padding-left: 0;
+    }
+
     &:first-child {
       padding-left: 0;
 
@@ -283,30 +304,13 @@
   }
 
   .main-nav__logo {
+    min-width: auto;
     padding-top: 10px;
 
     img {
       width: 149px;
       height: 72px;
       padding-left: 30px;
-    }
-  }
-
-  .main-nav__footer {
-    top: 85px;
-
-    .main-nav__item {
-      &--new,
-      &--sale {
-        display: block;
-        padding-top: 25px;
-
-        border: none;
-      }
-
-      &--sale {
-        padding-left: 25px;
-      }
     }
   }
 }

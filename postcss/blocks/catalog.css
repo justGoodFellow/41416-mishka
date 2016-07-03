@@ -326,6 +326,10 @@
     height: 197px;
   }
 
+  .catalog-item__description {
+    margin-bottom: 0;
+  }
+
   .catalog-item__buy-btn {
     padding-left: 0;
   }

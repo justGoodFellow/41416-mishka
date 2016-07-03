@@ -23,12 +23,12 @@
   margin-bottom: 5px;
 
   font-family: $font-secondary;
-}
 
-.featured-product__title a {
-  font-size: $font-size--big;
-  color: #000000;
-  text-decoration: none;
+  a {
+    font-size: $font-size--big;
+    color: #000000;
+    text-decoration: none;
+  }
 }
 
 .featured-product__mark {

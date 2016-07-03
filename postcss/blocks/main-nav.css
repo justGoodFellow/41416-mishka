@@ -4,6 +4,16 @@
 }
 
 .main-nav__logo {
+  img {
+    padding: 0;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   &:hover {
     opacity: 0.6;
   }
@@ -11,16 +21,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.main-nav__logo img {
-  padding: 0;
-}
-
-.main-nav__logo a {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 
 .main-nav__item {
@@ -42,25 +42,29 @@
     padding: 20px 0;
   }
 
-  &--search {
-    background: url(../img/icon-search.svg) 10% 50% no-repeat;
-  }
-
-  &--basket {
-    background: url(../img/icon-cart.svg) 30px 50% no-repeat;
-  }
-
   &--search,
   &--basket {
-    filter: saturate(0);
+    display: flex;
 
-    &:hover {
-      filter: saturate(1);
+    svg {
+      margin-left: 30px;
+      padding-right: 25px;
+
+      fill: #d3d2d2;
+    }
+
+    &:hover svg {
+      fill: $color-main;
     }
 
     &:active {
       opacity: 0.3;
     }
+  }
+
+  &--new,
+  &--sale {
+    display: none;
   }
 
   &:hover {
@@ -112,6 +116,11 @@
       padding-left: 0;
 
       text-align: center;
+    }
+
+    &--search,
+    &--basket {
+      padding-left: 0;
     }
   }
 
@@ -193,26 +202,29 @@
     }
 
     &--search {
+      display: block;
       width: 85px;
       padding: 0;
       overflow: hidden;
 
       white-space: nowrap;
-      text-indent: 500%;
 
-      background-position: 50%;
       border-left: 1px solid #ececec;
+
+      svg {
+        margin-right: 20px;
+        margin-left: 0;
+        padding: 35px;
+        padding-bottom: 30px;
+      }
     }
 
     &--basket {
-      padding-left: 75px;
+      display: flex;
+      padding-top: 35px;
+      padding-bottom: 30px;
 
       border-left: 1px solid #ececec;
-    }
-
-    &--new,
-    &--sale {
-      display: none;
     }
   }
 
@@ -261,8 +273,12 @@
 }
 
 @media (--desktop-widths) {
+  .main-nav__menu {
+    min-height: 89px;
+  }
+
   .main-nav__item {
-    padding: 30px 35px;
+    padding: 35px;
 
     &--catalog,
     &--order {
@@ -275,13 +291,22 @@
       flex-grow: 1;
       order: 0;
       margin-right: 65px;
-      padding: 5px 0;
       padding: 0;
+    }
+
+    &--search {
+      margin: 0;
+      padding: 0;
+
+      svg {
+        padding: 35px;
+        padding-bottom: 30px;
+      }
     }
 
     &--basket {
       padding-right: 0;
-      padding-left: 80px;
+      padding-left: 0;
     }
 
     &--new,
@@ -305,7 +330,6 @@
 
   .main-nav__logo {
     min-width: auto;
-    padding-top: 10px;
 
     img {
       width: 149px;

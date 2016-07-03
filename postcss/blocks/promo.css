@@ -24,6 +24,7 @@
 .promo__inner--interior {
   background-color: $color-main;
 }
+
 .promo__inner--toys {
   background-color: $color-main--dark;
 }
@@ -175,6 +176,10 @@
 
     font-size: 20px;
     line-height: $line-height--big;
+
+    &:hover {
+      margin-top: -5px;
+    }
   }
 }
 

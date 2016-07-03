@@ -218,22 +218,25 @@
   &--phone {
     text-transform: uppercase;
 
-    background-image: url(../img/icon-phone.svg);
+    background-image: svg-load("../../img/icon-phone.svg", fill=#cccccc);
+
+    &:hover {
+      background-image: svg-load("../../img/icon-phone.svg", fill=$color-main);
+    }
   }
 
   &--mail {
-    background-image: url(../img/icon-mail.svg);
+    background-image: svg-load("../../img/icon-mail.svg", fill=#cccccc);
+
+    &:hover {
+      background-image: svg-load("../../img/icon-mail.svg", fill=$color-main);
+    }
   }
 
   &--phone,
   &--mail {
     background-repeat: no-repeat;
     background-position: 98% 50%;
-    filter: saturate(0);
-
-    &:hover {
-      filter: saturate(1);
-    }
   }
 
   &--fully {

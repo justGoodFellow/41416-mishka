@@ -151,7 +151,7 @@
 @media (--desktop-widths) {
   .reviews {
     padding-top: 10px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
 
     background: none;
   }

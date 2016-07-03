@@ -14,12 +14,16 @@ var svgmin = require("gulp-svgmin");
 var server = require("browser-sync");
 var run = require("run-sequence");
 var del = require("del");
+var inlinesvg = require("postcss-inline-svg");
+var inlinesvgopt = require('postcss-svgo');
 
 gulp.task("style", function() {
   gulp.src("postcss/style.css")
     .pipe(plumber())
     .pipe(postcss([
       precss(),
+      inlinesvg(),
+      inlinesvgopt(),
       autoprefixer({browsers: [
         "last 1 version",
         "last 2 Chrome versions",

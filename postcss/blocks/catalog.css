@@ -208,8 +208,7 @@
 
   .catalog-item {
     display: flex;
-    height: 332px;
-    min-height: auto;
+    min-height: 332px;
     margin: 54px 0;
   }
 
@@ -305,7 +304,7 @@
   .catalog-item {
     flex-direction: column;
     width: 316px;
-    height: 658px;
+    min-height: 658px;
     margin: 30px 0;
 
     &:hover {
@@ -323,7 +322,8 @@
   }
 
   .catalog-item__wrapper {
-    height: 197px;
+    flex-grow: 1;
+    min-height: 197px;
   }
 
   .catalog-item__description {

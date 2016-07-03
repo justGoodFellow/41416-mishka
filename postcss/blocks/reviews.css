@@ -132,7 +132,7 @@
 
   .reviews__write {
     position: absolute;
-    top: 0px;
+    top: 0;
     right: 0;
 
     min-width: 175px;

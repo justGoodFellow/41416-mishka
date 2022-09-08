@@ -7,7 +7,7 @@
 }
 
 .catalog__wrapper {
-  @mixin container;
+  @add-mixin container;
 }
 
 .catalog__title {

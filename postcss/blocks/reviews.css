@@ -4,7 +4,7 @@
 }
 
 .reviews__wrapper {
-  @mixin container;
+  @add-mixin container;
 
   display: flex;
   flex-direction: column;

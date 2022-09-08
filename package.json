@@ -1,44 +1,61 @@
 {
   "name": "41416-mishka",
-  "version": "0.1.0",
   "private": true,
   "description": "Личный проект «Мишка» от HTML Academy",
-  "author": "Сергей Боднарюк",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:htmlacademy-adaptive/41416-mishka.git"
-  },
-  "bugs": {
-    "url": "https://github.com/htmlacademy-adaptive/41416-mishka/issues"
-  },
-  "homepage": "https://github.com/htmlacademy-adaptive/41416-mishka",
-  "devDependencies": {
-    "autoprefixer": "6.3.6",
-    "browser-sync": "2.12.10",
-    "css-mqpacker": "^5.0.1",
-    "del": "^2.2.1",
-    "editorconfig-tools": "0.1.1",
-    "gulp": "3.9.1",
-    "gulp-csso": "^2.0.0",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-plumber": "1.1.0",
-    "gulp-postcss": "6.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-svgmin": "^1.2.2",
-    "gulp-svgstore": "^6.0.0",
-    "gulp-tasks": "0.0.2",
-    "load": "^1.0.2",
-    "postcss-inline-svg": "^2.0.1",
-    "postcss-svgo": "^2.1.3",
-    "precss": "1.4.0",
-    "run-sequence": "^1.2.1"
+  "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
+  "homepage": "https://github.com/justGoodFellow/41416-mishka",
+  "engines": {
+    "node": "16.17.0"
   },
   "scripts": {
-    "test": "editorconfig-tools check *",
-    "build": "gulp build",
-    "start": "npm run build && gulp serve"
+    "editorconfig": "editorconfig-cli",
+    "test": "npm run editorconfig",
+    "build": "gulp",
+    "start": "gulp && gulp serve"
   },
-  "engines": {
-    "node": "5.11"
-  }
+  "browserslist": [
+    "> 0.5% in RU",
+    "last 2 versions",
+    "not dead",
+    "ie 11",
+    "iOS >= 10.3"
+  ],
+  "editorconfig-cli": [
+    "*.js",
+    "*.json",
+    "*.html",
+    "img/*.svg",
+    "postcss/**/*.css",
+    "js/*.js"
+  ],
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^10.4.8",
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "eslint": "^8.23.0",
+    "eslint-config-htmlacademy": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "^9.0.0",
+    "postcss": "^8.4.16",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-inline-svg": "^5.0.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.8.1",
+    "postcss-sort-media-queries": "^4.3.0",
+    "postcss-svgo": "^5.1.0",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^13.13.1"
+  },
+  "peerDependencies": {
+    "postcss": "^8.4.16"
+  },
+  "dependencies": {}
 }

@@ -6,7 +6,7 @@
 }
 
 .promo__wrapper {
-  @mixin container;
+  @add-mixin container;
 
   flex-grow: 1;
 }
@@ -141,7 +141,7 @@
   }
 
   .promo__buttons {
-    @mixin container;
+    @add-mixin container;
 
     display: flex;
     margin-top: auto;

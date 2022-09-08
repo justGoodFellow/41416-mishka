@@ -151,7 +151,7 @@
   }
 
   .main-nav__wrapper {
-    @mixin container;
+    @add-mixin container;
 
     position: relative;
   }

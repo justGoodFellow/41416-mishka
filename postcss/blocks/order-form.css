@@ -9,7 +9,7 @@
 }
 
 .order-form__wrapper {
-  @mixin container;
+  @add-mixin container;
 }
 
 .order-form__description {

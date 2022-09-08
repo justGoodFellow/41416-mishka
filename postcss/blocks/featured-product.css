@@ -10,7 +10,7 @@
 }
 
 .featured-product__wrapper {
-  @mixin container;
+  @add-mixin container;
 }
 
 .featured-product__header {

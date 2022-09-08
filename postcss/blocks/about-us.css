@@ -10,7 +10,7 @@
 }
 
 .about-us__wrapper {
-  @mixin container;
+  @add-mixin container;
 }
 
 .about-us__advantage {

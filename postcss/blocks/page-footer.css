@@ -5,7 +5,7 @@
 }
 
 .page-footer__wrapper {
-  @mixin container;
+  @add-mixin container;
 }
 
 .page-footer__logo {

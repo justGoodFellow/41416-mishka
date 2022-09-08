@@ -3,7 +3,7 @@
   "empty-lines-between-media-rules": 1,
   "sort-order": [
     [
-      "@mixin"
+      "@add-mixin"
     ],
     [
       "content",

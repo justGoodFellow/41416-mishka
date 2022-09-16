@@ -63,6 +63,11 @@ function symbols() {
     .pipe(gulp.dest("img"));
 }
 
+function html() {
+  return gulp.src("*.html")
+    .pipe(gulp.dest("build"))
+    .pipe(server.reload({stream: true}));
+}
 
 function serve() {
   server.init({
@@ -73,7 +78,7 @@ function serve() {
   });
 
   gulp.watch("postcss/**/*.css", style);
-  gulp.watch("*.html").on("change", server.reload);
+  gulp.watch("*.html", html);
 }
 
 function clean() {
@@ -104,6 +109,7 @@ var build = gulp.series(
 
 exports.clean = clean;
 exports.copy = copy;
+exports.html = html;
 exports.style = style;
 exports.images = images;
 exports.symbols = symbols;

@@ -1,0 +1,17 @@
+.logo-simple__svg {
+  display: block;
+}
+
+.logo-simple__link[href] {
+  display: block;
+}
+
+.logo-simple__link[href] .logo-simple__svg {
+  &:hover {
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

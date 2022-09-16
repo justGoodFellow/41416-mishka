@@ -64,6 +64,14 @@
   border: 1px solid $color-gray--light;
   cursor: pointer;
 
+  &--prev {
+    background: url("../img/icon-left-arrow.svg") 50% no-repeat;
+  }
+
+  &--next {
+    background: url("../img/icon-right-arrow.svg") 50% no-repeat;
+  }
+
   &--prev,
   &--next {
     &:hover {
@@ -73,14 +81,6 @@
     &:active {
       opacity: 0.3;
     }
-  }
-
-  &--prev {
-    background: url(../img/icon-left-arrow.svg) 50% no-repeat;
-  }
-
-  &--next {
-    background: url(../img/icon-right-arrow.svg) 50% no-repeat;
   }
 }
 
@@ -94,10 +94,10 @@
     padding-top: 40px;
     padding-bottom: 80px;
 
-    background: url(../img/review@1x.jpg) no-repeat;
+    background: url("../img/review@1x.jpg") no-repeat;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url(../img/review@2x.jpg);
+      background-image: url("../img/review@2x.jpg");
       background-size: 350px auto;
     }
   }
@@ -162,10 +162,10 @@
     padding-top: 30px;
     padding-left: 175px;
 
-    background: url(../img/review@1x.jpg) no-repeat;
+    background: url("../img/review@1x.jpg") no-repeat;
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background-image: url(../img/review@2x.jpg);
+      background-image: url("../img/review@2x.jpg");
       background-size: 350px auto;
     }
   }

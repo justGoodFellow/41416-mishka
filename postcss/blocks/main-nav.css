@@ -92,11 +92,11 @@
 }
 
 .main-nav--closed .main-nav__toggle {
-  background: url(../img/icon-menu-open.svg) 50% no-repeat;
+  background: url("../img/icon-menu-open.svg") 50% no-repeat;
 }
 
 .main-nav--opened .main-nav__toggle {
-  background: url(../img/icon-menu-close.svg) 50% no-repeat;
+  background: url("../img/icon-menu-close.svg") 50% no-repeat;
 }
 
 @media (--mobile-widths-only) {

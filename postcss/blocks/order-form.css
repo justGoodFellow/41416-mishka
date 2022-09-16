@@ -12,11 +12,6 @@
   @add-mixin container;
 }
 
-.order-form__description {
-  line-height: $line-height;
-  color: $color-gray;
-}
-
 .order-form__title {
   margin: 0;
   padding-top: 75px;
@@ -29,6 +24,7 @@
 
 .order-form__description {
   line-height: $line-height;
+  color: $color-gray;
 }
 
 .order-form__selection {
@@ -41,16 +37,6 @@
 
   &--phone {
     margin-top: 25px;
-
-    .order-form__selection-title {
-      margin-bottom: 10px;
-    }
-  }
-
-  &--mail {
-    .order-form__selection-title {
-      margin-bottom: 5px;
-    }
   }
 }
 
@@ -62,6 +48,14 @@
   font-size: 16px;
   color: $color-main;
   text-transform: uppercase;
+}
+
+.order-form__selection--phone .order-form__selection-title {
+  margin-bottom: 10px;
+}
+
+.order-form__selection--mail .order-form__selection-title {
+  margin-bottom: 5px;
 }
 
 .order-form__selection-inner {
@@ -91,15 +85,6 @@
 .order-form__selection-inner--checkbox {
   label {
     margin-bottom: 20px;
-
-    &:hover::before {
-      border-color: $color-main;
-    }
-
-    &:active::before {
-      border-color: $color-gray;
-      opacity: 0.3;
-    }
   }
 }
 
@@ -192,60 +177,22 @@
   }
 }
 
+.order-form__selection-inner--radio:hover::before,
+.order-form__selection-inner--checkbox:hover::before {
+  border-color: $color-main;
+}
+
+.order-form__selection-inner--radio:active::before,
+.order-form__selection-inner--checkbox:active::before {
+  border-color: $color-gray;
+  opacity: 0.3;
+}
+
 .order-form__selection-inner--name {
   margin-top: 39px;
 
   label {
     margin-top: 15px;
-  }
-}
-
-.selection-field {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 15px 0;
-
-  font-weight: normal;
-  font-size: 16px;
-  font-family: $font-secondary;
-  color: rgba(68, 68, 68, 0.3);
-
-  background: none;
-  border: none;
-  border-bottom: 2px solid #000000;
-  border-radius: 0;
-
-  &--phone {
-    text-transform: uppercase;
-
-    background-image: svg-load("../../img/icon-phone.svg", fill=#cccccc);
-
-    &:hover {
-      background-image: svg-load("../../img/icon-phone.svg", fill=$color-main);
-    }
-  }
-
-  &--mail {
-    background-image: svg-load("../../img/icon-mail.svg", fill=#cccccc);
-
-    &:hover {
-      background-image: svg-load("../../img/icon-mail.svg", fill=$color-main);
-    }
-  }
-
-  &--phone,
-  &--mail {
-    background-repeat: no-repeat;
-    background-position: 98% 50%;
-  }
-
-  &--fully {
-    box-sizing: border-box;
-    min-height: 150px;
-    margin-top: 10px;
-    padding: 15px;
-
-    border: 2px solid #000000;
   }
 }
 
@@ -318,7 +265,10 @@
     min-height: 240px;
     margin-bottom: 60px;
 
-    background: $color-gray--light url(../img/bg-zigzag-fill.svg) 0 100% repeat-x;
+    background-color: $color-gray--light;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 0 100%;
     background-size: auto 24px;
   }
 
@@ -345,11 +295,6 @@
     &--type {
       padding-top: 40px;
       padding-bottom: 35px;
-
-      .order-form__selection-title {
-        align-self: flex-start;
-        padding-top: 15px;
-      }
     }
 
     &--color {
@@ -361,11 +306,6 @@
     &--name {
       padding-top: 35px;
       padding-bottom: 60px;
-
-      .order-form__selection-title {
-        align-self: flex-start;
-        padding-top: 25px;
-      }
 
       label {
         margin-top: 10px;
@@ -394,6 +334,16 @@
   .order-form__selection-title {
     flex-shrink: 0;
     width: 170px;
+  }
+
+  .order-form__selection--type .order-form__selection-title {
+    align-self: flex-start;
+    padding-top: 15px;
+  }
+
+  .order-form__selection--name .order-form__selection-title {
+    align-self: flex-start;
+    padding-top: 25px;
   }
 
   .order-form__selection-inner {
@@ -437,12 +387,6 @@
     font-size: 18px;
   }
 
-  .selection-field {
-    padding-left: 20px;
-
-    font-size: 18px;
-  }
-
   .order-form__selection-inner--radio {
     label {
       height: 54px;
@@ -462,31 +406,18 @@
     }
   }
 
-  .order-form__selection-inner--checkbox {
-    label {
-      &::before {
-        width: 50px;
-        height: 50px;
-      }
-    }
+  .order-form__selection-inner--checkbox label::before {
+    width: 50px;
+    height: 50px;
+  }
 
-    input[type="checkbox"]:checked ~ label::after {
+  .order-form__selection-inner--checkbox input[type="checkbox"] {
+    &:checked ~ label::after {
       top: 10px;
       left: 20px;
 
       width: 13px;
       height: 28px;
-    }
-  }
-
-  .selection-field {
-    &--phone,
-    &--mail {
-      background-position: 95% 50%;
-    }
-
-    &--fully {
-      margin-top: 0;
     }
   }
 
@@ -539,7 +470,7 @@
     width: 870px;
 
     &--checkbox label {
-        width: 180px;
+      width: 180px;
     }
   }
 
@@ -560,13 +491,6 @@
 
     &--area {
       padding-bottom: 60px;
-    }
-  }
-
-  .selection-field {
-    &--phone,
-    &--mail {
-      background-position: 99.5% 50%;
     }
   }
 

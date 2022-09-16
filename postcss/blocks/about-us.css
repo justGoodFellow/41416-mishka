@@ -1,5 +1,6 @@
 .about-us {
   padding-top: 10px;
+
   font-family: $font-secondary;
 }
 
@@ -20,29 +21,29 @@
   font-weight: bold;
   font-size: 16px;
 
-    &--flower {
-      background: url(../img/icon-feature-1.svg) no-repeat;
-    }
+  &--flower {
+    background: url("../img/icon-feature-1.svg") no-repeat;
+  }
 
-    &--money {
-      background: url(../img/icon-feature-3.svg) no-repeat;
-    }
+  &--money {
+    background: url("../img/icon-feature-3.svg") no-repeat;
+  }
 
-    &--heart {
-      background: url(../img/icon-feature-5.svg) no-repeat;
-    }
+  &--heart {
+    background: url("../img/icon-feature-5.svg") no-repeat;
+  }
 
-    &--roll {
-      background: url(../img/icon-feature-2.svg) no-repeat;
-    }
+  &--roll {
+    background: url("../img/icon-feature-2.svg") no-repeat;
+  }
 
-    &--rocket {
-      background: url(../img/icon-feature-4.svg) no-repeat;
-    }
+  &--rocket {
+    background: url("../img/icon-feature-4.svg") no-repeat;
+  }
 
-    &--gift {
-      background: url(../img/icon-feature-6.svg) no-repeat;
-    }
+  &--gift {
+    background: url("../img/icon-feature-6.svg") no-repeat;
+  }
 }
 
 @media (--tablet-widths) {
@@ -78,8 +79,8 @@
 
 @media (--desktop-widths) {
   .about-us {
-    padding-top: 10px;
     margin-bottom: 15px;
+    padding-top: 10px;
   }
 
   .about-us__wrapper {

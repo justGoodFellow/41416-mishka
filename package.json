@@ -9,7 +9,8 @@
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "test": "npm run editorconfig",
+    "stylelint": "stylelint \"postcss/**/*.css\"",
+    "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp",
     "start": "gulp && gulp serve"
   },
@@ -52,10 +53,12 @@
     "postcss-sort-media-queries": "^4.3.0",
     "postcss-svgo": "^5.1.0",
     "run-sequence": "^2.2.1",
-    "stylelint": "^13.13.1"
+    "stylelint": "^14.11.0",
+    "stylelint-config-htmlacademy": "^1.1.0",
+    "stylelint-config-recommended": "^9.0.0",
+    "stylelint-order": "^5.0.0"
   },
   "peerDependencies": {
     "postcss": "^8.4.16"
-  },
-  "dependencies": {}
+  }
 }

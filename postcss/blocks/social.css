@@ -1,17 +1,19 @@
 .social__link {
   padding: 10px;
+
   text-decoration: none;
 
-    svg {
-      padding: 0 10px;
-      padding-top: 20px;
-      padding-bottom: 25px;
-      &:hover {
-        fill: $color-main;
-      }
+  svg {
+    padding: 0 10px;
+    padding-top: 20px;
+    padding-bottom: 25px;
 
-      &:active {
-        opacity: 0.3;
+    &:hover {
+      fill: $color-main;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

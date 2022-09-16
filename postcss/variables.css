@@ -4,8 +4,8 @@ $color-gray--dark: #e5e5e5;
 $color-main: #63d1bb;
 $color-main--dark: #56c3b2;
 
-$font-main: 'Open Sans', Arial, sans-serif;
-$font-secondary: Verdana, Geneva, sans-serif;
+$font-main: "Open Sans", arial, sans-serif;
+$font-secondary: verdana, geneva, sans-serif;
 
 $font-size--big: 24px;
 $font-size--small: 14px;

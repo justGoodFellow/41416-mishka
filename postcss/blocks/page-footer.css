@@ -10,19 +10,6 @@
 
 .page-footer__logo {
   display: none;
-  width: 200px;
-
-  text-align: left;
-
-  svg {
-    &:hover {
-      fill: $color-main;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
 }
 
 .page-footer__social-links {
@@ -49,10 +36,6 @@
     opacity: 0.3;
   }
 
-  &:hover svg {
-    fill: $color-main--dark;
-  }
-
   svg {
     margin-left: 15px;
     padding: 0;
@@ -60,6 +43,10 @@
     vertical-align: middle;
 
     fill: $color-main;
+  }
+
+  &:hover svg {
+    fill: $color-main--dark;
   }
 }
 
@@ -72,20 +59,14 @@
   }
 
   .page-footer__logo {
-    display: block;
+    display: flex;
     width: 185px;
-
-    img {
-      display: block;
-      padding-top: 10px;
-    }
   }
 
   .page-footer__social-links {
     flex-shrink: 0;
 
     border: none;
-
   }
 
   .page-footer__copyright {

@@ -2,7 +2,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  background: url(../img/bg-zigzag-line.svg) 0 0 repeat-x;
+  background: url("../img/bg-zigzag-line.svg") 0 0 repeat-x;
   background-size: 300px;
 }
 
@@ -22,28 +22,26 @@
   margin: 0 30px;
 }
 
-.contacts {
-  dl {
-    margin-top: 25px;
-    margin-bottom: 30px;
+.contacts dl {
+  margin-top: 25px;
+  margin-bottom: 30px;
 
-    line-height: $line-height--big;
-    color: $color-gray;
-  }
+  line-height: $line-height--big;
+  color: $color-gray;
+}
 
-  dt {
-    display: inline-block;
-    width: 74px;
+.contacts dt {
+  display: inline-block;
+  width: 74px;
 
-    vertical-align: top;
-  }
+  vertical-align: top;
+}
 
-  dd {
-    display: inline-block;
-    margin: 0;
+.contacts dd {
+  display: inline-block;
+  margin: 0;
 
-    vertical-align: top;
-  }
+  vertical-align: top;
 }
 
 .contacts__mail-link {
@@ -93,7 +91,7 @@
     margin-top: -65px;
     margin-left: -35px;
 
-    background: url(../img/icon-map-pin.svg) no-repeat;
+    background: url("../img/icon-map-pin.svg") no-repeat;
   }
 
   img {
@@ -127,7 +125,7 @@
 
     font-size: $tablet-font-size--big;
 
-    background: url(../img/icon-flag.svg) 100% 100% no-repeat;
+    background: url("../img/icon-flag.svg") 100% 100% no-repeat;
   }
 
   .contacts__inner {
@@ -188,7 +186,7 @@
       width: 47px;
       height: 81px;
 
-      background: url(../img/icon-flag.svg);
+      background: url("../img/icon-flag.svg");
     }
   }
 

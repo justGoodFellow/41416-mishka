@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": "htmlacademy/es5",
+  "ignorePatterns": ["js/picturefill.min.js"],
+  "rules": {
+    // Additional rules...
+  }
+}

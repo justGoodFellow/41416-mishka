@@ -42,6 +42,20 @@
     padding: 20px 0;
   }
 
+  &--search {
+    svg {
+      width: 18px;
+      height: 19px;
+    }
+  }
+
+  &--basket {
+    svg {
+      width: 21px;
+      height: 18px;
+    }
+  }
+
   &--search,
   &--basket {
     display: flex;

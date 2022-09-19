@@ -1,5 +1,7 @@
 .logo-simple__svg {
   display: block;
+  width: 102px;
+  height: 34px;
 }
 
 .logo-simple__link[href] {

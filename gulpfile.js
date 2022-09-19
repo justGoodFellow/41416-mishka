@@ -19,6 +19,28 @@ var postcssNested = require('postcss-nested');
 var postcssPresetEnv = require('postcss-preset-env');
 var postcssSortMediaQueries = require('postcss-sort-media-queries');
 
+function clean() {
+  return del('build');
+}
+
+function copy() {
+  return gulp.src([
+    'fonts/**/*.{woff,woff2}',
+    'img/**',
+    'js/**',
+    '*.html'
+  ], {
+    base: '.'
+  })
+  .pipe(gulp.dest('build'));
+}
+
+function html() {
+  return gulp.src('*.html')
+    .pipe(gulp.dest('build'))
+    .pipe(server.reload({stream: true}));
+}
+
 function style() {
   return gulp.src('postcss/style.css')
     .pipe(plumber())
@@ -47,25 +69,25 @@ function images() {
         progressive: true,
         quality: 100
       }),
-      imagemin.svgo()
+      imagemin.svgo({
+        plugins: [
+          {
+            removeViewBox: false
+          }
+        ]
+      })
     ]))
     .pipe(gulp.dest('build/img'));
 }
 
 function symbols() {
-  return gulp.src('img/*.svg')
+  return gulp.src('build/img/*.svg')
     .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename('symbols.svg'))
-    .pipe(gulp.dest('img'));
-}
-
-function html() {
-  return gulp.src('*.html')
-    .pipe(gulp.dest('build'))
-    .pipe(server.reload({stream: true}));
+    .pipe(gulp.dest('build/img'));
 }
 
 function serve() {
@@ -80,30 +102,12 @@ function serve() {
   gulp.watch('*.html', html);
 }
 
-function clean() {
-  return del('build');
-}
-
-function copy() {
-  return gulp.src([
-    'fonts/**/*.{woff,woff2}',
-    'img/**',
-    'js/**',
-    '*.html'
-  ], {
-    base: '.'
-  })
-  .pipe(gulp.dest('build'));
-}
-
 var build = gulp.series(
     clean,
     copy,
-    symbols,
-    gulp.parallel(
-        style,
-        images
-    )
+    style,
+    images,
+    symbols
 );
 
 exports.clean = clean;

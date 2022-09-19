@@ -4,7 +4,7 @@
     "node": true
   },
   "extends": "htmlacademy/es5",
-  "ignorePatterns": ["js/picturefill.min.js"],
+  "ignorePatterns": ["js/picturefill.min.js", "js/svg4everybody.js"],
   "rules": {
     // Additional rules...
   }

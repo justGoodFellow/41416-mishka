@@ -2,26 +2,39 @@
   padding: 10px;
 
   text-decoration: none;
+}
 
+.social__link--in {
   svg {
-    padding: 0 10px;
-    padding-top: 20px;
-    padding-bottom: 25px;
-
-    &:hover {
-      fill: $color-main;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    width: 22px;
+    height: 21px;
   }
 }
 
-@media (--tablet-widths) {
-  .social__link {
-    img {
-      padding: 0 8px;
-    }
+.social__link--fb {
+  svg {
+    width: 15px;
+    height: 28px;
+  }
+}
+
+.social__link--tw {
+  svg {
+    width: 23px;
+    height: 20px;
+  }
+}
+
+.social__link svg {
+  padding: 0 10px;
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  &:hover {
+    fill: $color-main;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

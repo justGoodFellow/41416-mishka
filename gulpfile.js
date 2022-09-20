@@ -17,7 +17,6 @@ var postcssMixins = require('postcss-mixins');
 var postcssAdvancedVariables = require('postcss-advanced-variables');
 var postcssNested = require('postcss-nested');
 var postcssPresetEnv = require('postcss-preset-env');
-var postcssSortMediaQueries = require('postcss-sort-media-queries');
 
 function clean() {
   return del('build');
@@ -51,8 +50,7 @@ function style() {
       postcssPresetEnv(),
       inlinesvg(),
       inlinesvgopt(),
-      autoprefixer(),
-      postcssSortMediaQueries()
+      autoprefixer()
     ]))
     .pipe(gulp.dest('build/css'))
     .pipe(minify())

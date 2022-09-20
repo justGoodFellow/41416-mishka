@@ -51,7 +51,6 @@
     "postcss-mixins": "^9.0.4",
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.8.1",
-    "postcss-sort-media-queries": "^4.3.0",
     "postcss-svgo": "^5.1.0",
     "stylelint": "^14.11.0",
     "stylelint-config-htmlacademy": "^1.1.0",

@@ -1,6 +1,7 @@
 @custom-media --mobile-widths-only (max-width: 767px);
 @custom-media --tablet-widths (min-width: 768px);
 @custom-media --desktop-widths (min-width: 1150px);
+@custom-media --retina (min-resolution: 144dpi), (min-resolution: 1.5dppx);
 
 @define-mixin container {
   width: $screen-mobile;

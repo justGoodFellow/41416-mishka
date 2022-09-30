@@ -1,3 +1,7 @@
+.main-nav__wrapper {
+  @add-mixin container;
+}
+
 .main-nav__menu {
   display: flex;
   flex-direction: column;
@@ -121,6 +125,10 @@
     margin: 0 auto;
   }
 
+  .main-nav__wrapper {
+    width: auto;
+  }
+
   .main-nav__item {
     padding-left: 75px;
 
@@ -165,8 +173,6 @@
   }
 
   .main-nav__wrapper {
-    @add-mixin container;
-
     position: relative;
   }
 

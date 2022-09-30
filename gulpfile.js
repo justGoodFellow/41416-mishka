@@ -44,8 +44,8 @@ function style() {
   return gulp.src('postcss/style.css')
     .pipe(plumber())
     .pipe(postcss([
-      postcssMixins(),
       postcssAdvancedVariables(),
+      postcssMixins(),
       postcssNested(),
       postcssPresetEnv(),
       inlinesvg(),

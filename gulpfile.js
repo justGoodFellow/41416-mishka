@@ -17,6 +17,7 @@ var postcssMixins = require('postcss-mixins');
 var postcssAdvancedVariables = require('postcss-advanced-variables');
 var postcssNested = require('postcss-nested');
 var postcssPresetEnv = require('postcss-preset-env');
+var webp = require('gulp-webp');
 
 function clean() {
   return del('build');
@@ -78,6 +79,12 @@ function images() {
     .pipe(gulp.dest('build/img'));
 }
 
+function createWebp() {
+  return gulp.src('build/img/**/*.{png,jpg}')
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest('build/img'));
+}
+
 function symbols() {
   return gulp.src('build/img/*.svg')
     .pipe(svgmin())
@@ -105,6 +112,7 @@ var build = gulp.series(
     copy,
     style,
     images,
+    createWebp,
     symbols
 );
 
@@ -113,6 +121,7 @@ exports.copy = copy;
 exports.html = html;
 exports.style = style;
 exports.images = images;
+exports.webp = createWebp;
 exports.symbols = symbols;
 exports.serve = serve;
 

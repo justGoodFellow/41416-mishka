@@ -18,6 +18,7 @@ var postcssAdvancedVariables = require('postcss-advanced-variables');
 var postcssNested = require('postcss-nested');
 var postcssPresetEnv = require('postcss-preset-env');
 var webp = require('gulp-webp');
+var sourcemaps = require('gulp-sourcemaps');
 
 function clean() {
   return del('build');
@@ -44,6 +45,7 @@ function html() {
 function style() {
   return gulp.src('postcss/style.css')
     .pipe(plumber())
+    .pipe(sourcemaps.init())
     .pipe(postcss([
       postcssAdvancedVariables(),
       postcssMixins(),
@@ -56,6 +58,7 @@ function style() {
     .pipe(gulp.dest('build/css'))
     .pipe(minify())
     .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(server.reload({stream: true}));
 }

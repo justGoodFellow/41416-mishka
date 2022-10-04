@@ -13,7 +13,7 @@
     "eslint": "eslint js",
     "test": "npm run editorconfig && npm run stylelint && npm run eslint",
     "build": "gulp",
-    "start": "gulp && gulp serve"
+    "start": "gulp && gulp server"
   },
   "browserslist": [
     "> 0.5% in RU",
@@ -26,9 +26,9 @@
     "*.js",
     "*.json",
     "*.html",
-    "img/*.svg",
+    "img/**/*.svg",
     "postcss/**/*.css",
-    "js/*.js"
+    "js/**/*.js"
   ],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",

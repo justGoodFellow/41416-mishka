@@ -80,8 +80,6 @@
 }
 
 .featured-product img {
-  padding: 0;
-
   background-color: $color-gray--light;
 }
 

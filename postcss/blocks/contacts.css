@@ -93,12 +93,6 @@
 
     background: url("../img/icon-map-pin.svg") no-repeat;
   }
-
-  img {
-    padding: 0;
-  }
-
-  /* background-color: #ece9e2; */
 }
 
 .contacts__feedback-btn {

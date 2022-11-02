@@ -9,18 +9,21 @@
   text-align: center;
   color: $color-gray;
   text-transform: uppercase;
+
   text-decoration: none;
 
   border: 2px solid $color-gray;
+  outline: none;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: #ffffff;
 
     background: $color-gray;
   }
 
-  &:focus {
+  &:active {
     color: rgba(255, 255, 255, 0.3);
   }
 }

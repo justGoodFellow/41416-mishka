@@ -18,7 +18,7 @@
 
 .page-footer__copyright {
   margin: 0;
-  padding: 20px 0;
+  padding: 23px 0;
 
   font-weight: bold;
   font-size: 18px;
@@ -26,6 +26,8 @@
 }
 
 .page-footer__copyright-link {
+  display: block;
+
   color: #000000;
   text-decoration: none;
 

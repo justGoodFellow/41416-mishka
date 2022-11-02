@@ -47,26 +47,22 @@
   background-color: $color-main;
 
   &::after {
+    content: "";
+
+    display: block;
+
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+
     opacity: 0.5;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
-  &:hover::after {
-    opacity: 1;
   }
 
   &--interior {
     &::after {
-      content: "";
-
-      display: block;
       width: 40px;
       height: 62px;
 
-      background: url("../img/icon-interior.svg") 100% 50% no-repeat;
+      background-image: url("../img/icon-interior.svg");
     }
   }
 
@@ -74,13 +70,10 @@
     background-color: $color-main--dark;
 
     &::after {
-      content: "";
-
-      display: block;
       width: 60px;
       height: 62px;
 
-      background: url("../img/icon-toy.svg") 100% 50% no-repeat;
+      background-image: url("../img/icon-toy.svg");
     }
   }
 }
@@ -151,10 +144,6 @@
     margin-top: auto;
   }
 
-  .promo__button {
-    padding-right: 35px;
-  }
-
   .promo__inner--interior {
     .promo__button {
       background-color: $color-main;
@@ -175,14 +164,44 @@
 
   .promo__catalog {
     padding-top: 25px;
+    padding-right: 35px;
     padding-bottom: 40px;
     padding-left: 35px;
 
     font-size: 20px;
     line-height: $line-height--big;
 
-    &:hover {
-      margin-top: -5px;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      transform: translateY(-5px);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
+
+    &--interior {
+      &:hover,
+      &:focus {
+        background-color: #59d5bc;
+      }
+    }
+
+    &--toys {
+      &:hover,
+      &:focus {
+        background-color: #46c1ae;
+      }
     }
   }
 }

@@ -1,5 +1,13 @@
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
 .social__link {
-  padding: 10px;
+  display: block;
+  padding: 20px;
 
   text-decoration: none;
 }
@@ -26,10 +34,6 @@
 }
 
 .social__link svg {
-  padding: 0 10px;
-  padding-top: 20px;
-  padding-bottom: 25px;
-
   &:hover {
     fill: $color-main;
   }

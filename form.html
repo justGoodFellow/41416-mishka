@@ -18,8 +18,12 @@
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__wrapper">
           <div class="main-nav__menu">
-            <a class="main-nav__item main-nav__item--catalog" href="catalog.html">Каталог товаров</a>
-            <a class="main-nav__item main-nav__item--order" href="form.html">Вязание на заказ</a>
+            <a
+              class="main-nav__item main-nav__item--catalog"
+              href="catalog.html">Каталог товаров</a>
+            <a
+              class="main-nav__item main-nav__item--order"
+              href="form.html">Вязание на заказ</a>
             <div class="main-nav__item main-nav__item--logo">
               <div class="main-nav__logo logo">
                 <a class="logo__link" href="index.html">
@@ -30,7 +34,11 @@
                     <source
                       media="(min-width: 768px)"
                       srcset="img/logo-tablet.svg">
-                    <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+                    <img
+                      src="img/logo-mobile.svg"
+                      width="86"
+                      height="35"
+                      alt="Mishka">
                   </picture>
                 </a>
               </div>
@@ -47,8 +55,12 @@
               </svg>
               Корзина: пока пуста
             </a>
-            <a class="main-nav__item main-nav__item--new" href="#">Новые поступления</a>
-            <a class="main-nav__item main-nav__item--sale" href="#">Распродажа</a>
+            <a class="main-nav__item main-nav__item--new" href="#">
+              Новые поступления
+            </a>
+            <a class="main-nav__item main-nav__item--sale" href="#">
+              Распродажа
+            </a>
             <p class="main-nav__shipping">Бесплатная доставка по России</p>
           </div>
         </div>
@@ -62,7 +74,11 @@
         </div>
       </div>
       <div class="order-form__wrapper">
-        <p class="order-form__description">Мы будем рады воплотить в жизнь ваши пожелания!<br> Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.</p>
+        <p class="order-form__description">
+          Мы будем рады воплотить в жизнь ваши пожелания!<br>
+          Заполните простую форму заказа, и мы свяжемся с вами,
+          чтобы уточнить детали.
+        </p>
       </div>
         <form action="#" method="post">
           <div class="order-form__selection order-form__selection--type">
@@ -70,10 +86,21 @@
               <p class="order-form__selection-title">Тип</p>
               <div class="order-form__selection-inner order-form__selection-inner--radio">
                 <div>
-                  <input class="selection-area" id="interior" type="radio" name="kind"><label for="interior">Аксессуар для интерьера</label>
+                  <input
+                    class="selection-area"
+                    id="interior"
+                    type="radio"
+                    name="kind"
+                    checked>
+                  <label for="interior">Аксессуар для интерьера</label>
                 </div>
                 <div>
-                  <input class="selection-area" id="toys" type="radio" name="kind"><label for="toys">Детская игрушка</label>
+                  <input
+                    class="selection-area"
+                    id="toys"
+                    type="radio"
+                    name="kind">
+                  <label for="toys">Детская игрушка</label>
                 </div>
               </div>
             </div>
@@ -83,22 +110,48 @@
               <p class="order-form__selection-title">Цвет</p>
               <div class="order-form__selection-inner order-form__selection-inner--checkbox">
                 <div>
-                  <input id="white" class="selection-area" type="checkbox"><label for="white">Белый</label>
+                  <input
+                    id="white"
+                    class="selection-area"
+                    type="checkbox"
+                    checked>
+                  <label for="white">Белый</label>
                 </div>
                 <div>
-                  <input class="selection-area" id="gray" type="checkbox"><label for="gray">Серый</label>
+                  <input
+                    id="gray"
+                    class="selection-area"
+                    type="checkbox"
+                    checked>
+                  <label for="gray">Серый</label>
                 </div>
                 <div>
-                  <input class="selection-area" id="tiffany" type="checkbox"><label for="tiffany">&#171;Тиффани&#187;</label>
+                  <input
+                    id="tiffany"
+                    class="selection-area"
+                    type="checkbox">
+                  <label for="tiffany">&#171;Тиффани&#187;</label>
                 </div>
                 <div>
-                  <input class="selection-area" id="black" type="checkbox"><label for="black">Черный</label>
+                  <input
+                    id="black"
+                    class="selection-area"
+                    type="checkbox">
+                  <label for="black">Черный</label>
                 </div>
                 <div>
-                  <input class="selection-area" id="pink" type="checkbox"><label for="pink">Розовый</label>
+                  <input
+                    id="pink"
+                    class="selection-area"
+                    type="checkbox">
+                  <label for="pink">Розовый</label>
                 </div>
                 <div>
-                  <input class="selection-area" id="orange" type="checkbox"><label for="orange">Оранжевый</label>
+                  <input
+                    id="orange"
+                    class="selection-area"
+                    type="checkbox">
+                  <label for="orange">Оранжевый</label>
                 </div>
               </div>
             </div>
@@ -107,34 +160,69 @@
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">ФИО</p>
               <div class="order-form__selection-inner order-form__selection-inner--name">
-                <label><span>Фамилия:</span><input class="selection-field" id="surname" type="text" placeholder="Укажите фамилию"></label>
-                <label><span>Имя:</span><input class="selection-field" id="name" type="text" placeholder="Введите ваше имя"></label>
-                <label><span>Отчество:</span><input class="selection-field" id="patronymic" type="text"  placeholder="Отчество, если желаете"></label>
+                <label>
+                  <span>Фамилия:</span>
+                  <input
+                    id="surname"
+                    class="selection-field"
+                    type="text"
+                    placeholder="Укажите фамилию">
+                </label>
+                <label>
+                  <span>Имя:</span>
+                  <input
+                    id="name"
+                    class="selection-field"
+                    type="text"
+                    placeholder="Введите ваше имя">
+                </label>
+                <label>
+                  <span>Отчество:</span>
+                  <input
+                    id="patronymic"
+                    class="selection-field"
+                    type="text"
+                    placeholder="Отчество, если желаете">
+                </label>
               </div>
             </div>
           </div>
           <div class="order-form__selection order-form__selection--phone">
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">Тел</p>
-              <input class="selection-field selection-field--phone" type="tel" placeholder="+7 xxx xx xx">
+              <input
+                class="selection-field selection-field--phone"
+                type="tel"
+                placeholder="+7 xxx xx xx">
             </div>
           </div>
           <div class="order-form__selection order-form__selection--mail">
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">e-mail</p>
-              <input class="selection-field selection-field--mail" type="email" placeholder="Ваш e-mail">
+              <input
+                class="selection-field selection-field--mail"
+                type="email"
+                placeholder="Ваш e-mail">
             </div>
           </div>
           <div class="order-form__selection order-form__selection--area">
             <div class="order-form__wrapper">
               <p class="order-form__selection-title">Доп</p>
-              <textarea class="selection-field selection-field--fully" cols="20" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              <textarea
+                class="selection-field selection-field--fully"
+                cols="20"
+                rows="5"
+                placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </div>
           <div class="order-form__footer">
             <div class="order-form__wrapper">
-              <button class="order-form__btn btn" type="submit">Отправить заказ</button>
-              <p class="order-form__notice">Все поля являются обязательными</p>
+              <button class="order-form__btn btn" type="submit">
+                Отправить заказ
+              </button>
+              <p class="order-form__notice">
+                Все поля являются обязательными
+              </p>
             </div>
           </div>
         </form>
@@ -168,7 +256,9 @@
           </div>
         </div>
         <p class="page-footer__copyright">
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a
+            class="page-footer__copyright-link"
+            href="https://htmlacademy.ru/intensive/adaptive">
             Разработано
             <svg width="27" height="34">
               <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
